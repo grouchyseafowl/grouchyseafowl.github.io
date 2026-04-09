@@ -442,9 +442,9 @@ section:last-child {
 }
 
 .hero-image img {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
+  width: 260px;
+  height: auto;
+  border-radius: 8px;
   object-fit: cover;
   border: 3px solid var(--border);
   transition: border-color var(--transition-base);
@@ -474,8 +474,7 @@ section:last-child {
   }
 
   .hero-image img {
-    width: 160px;
-    height: 160px;
+    width: 200px;
   }
 }
 
