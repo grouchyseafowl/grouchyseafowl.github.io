@@ -453,6 +453,25 @@ section:last-child {
   line-height: 1.8;
 }
 
+.hero-socials {
+  display: flex;
+  gap: var(--space-lg);
+  margin-top: var(--space-lg);
+}
+
+.hero-socials a {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.hero-socials a:hover {
+  color: var(--amber);
+  text-decoration: none;
+}
+
 .hero-image {
   flex-shrink: 0;
 }
@@ -466,9 +485,7 @@ section:last-child {
   transition: border-color var(--transition-base);
 }
 
-.hero-image img:hover {
-  border-color: var(--amber-dim);
-}
+/* No hover effect on headshot — it's not a link */
 
 @media (max-width: 768px) {
   .hero {
