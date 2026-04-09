@@ -293,19 +293,18 @@ section:last-child {
 
 /* --- Cards --- */
 .card {
-  background: var(--bg-card);
+  background: var(--bg-input);
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: var(--space-lg);
   transition: border-color var(--transition-base), box-shadow var(--transition-base);
   background-image:
-    radial-gradient(ellipse at 30% 20%, rgba(240, 168, 48, 0.10) 0%, transparent 55%),
-    radial-gradient(ellipse at 75% 85%, rgba(240, 168, 48, 0.04) 0%, transparent 45%);
+    radial-gradient(ellipse at 35% 25%, rgba(240, 168, 48, 0.12) 0%, rgba(240, 168, 48, 0.04) 40%, transparent 70%);
   box-shadow:
-    0 2px 4px rgba(0, 0, 0, 0.5),
-    0 6px 20px rgba(0, 0, 0, 0.35),
+    0 2px 4px rgba(0, 0, 0, 0.6),
+    0 8px 24px rgba(0, 0, 0, 0.4),
     inset 0 1px 0 rgba(240, 168, 48, 0.08),
-    inset 0 0 30px rgba(240, 168, 48, 0.02);
+    inset 0 0 40px rgba(240, 168, 48, 0.03);
 }
 
 .card:hover {
@@ -338,13 +337,13 @@ section:last-child {
   }
 }
 
-/* --- Card with Rose Accent --- */
-.card--rose {
-  border-left: 3px solid var(--rose-dim);
+/* --- Card with Amber Accent --- */
+.card--amber {
+  border-left: 3px solid var(--amber-dim);
 }
 
-.card--rose:hover {
-  border-left-color: var(--rose);
+.card--amber:hover {
+  border-left-color: var(--amber);
 }
 
 /* --- Card with Blue Accent --- */
@@ -433,8 +432,9 @@ section:last-child {
   line-height: 1.05;
   margin-bottom: var(--space-md);
   text-shadow:
-    0 0 40px rgba(240, 168, 48, 0.25),
-    0 0 80px rgba(240, 168, 48, 0.1);
+    0 0 15px rgba(240, 168, 48, 0.5),
+    0 0 40px rgba(240, 168, 48, 0.3),
+    0 0 80px rgba(240, 168, 48, 0.15);
 }
 
 .hero-identity {
@@ -530,17 +530,17 @@ section:last-child {
   display: block;
   text-decoration: none;
   padding: var(--space-lg);
-  background: var(--bg-card);
+  background: var(--bg-input);
   border: 1px solid var(--border);
   border-radius: 8px;
   transition: border-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
   background-image:
-    radial-gradient(ellipse at 40% 30%, rgba(240, 168, 48, 0.10) 0%, transparent 55%);
+    radial-gradient(ellipse at 40% 30%, rgba(240, 168, 48, 0.12) 0%, rgba(240, 168, 48, 0.04) 40%, transparent 70%);
   box-shadow:
-    0 2px 4px rgba(0, 0, 0, 0.5),
-    0 6px 20px rgba(0, 0, 0, 0.35),
+    0 2px 4px rgba(0, 0, 0, 0.6),
+    0 8px 24px rgba(0, 0, 0, 0.4),
     inset 0 1px 0 rgba(240, 168, 48, 0.08),
-    inset 0 0 30px rgba(240, 168, 48, 0.02);
+    inset 0 0 40px rgba(240, 168, 48, 0.03);
 }
 
 .feature-link:hover {
