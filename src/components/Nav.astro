@@ -90,6 +90,13 @@ const navLinks = [
     padding: var(--space-xs) 0;
     border-bottom: 2px solid transparent;
     transition: color var(--transition-fast), border-color var(--transition-fast);
+    outline: none;
+  }
+
+  .nav-links a:focus-visible {
+    outline: 2px solid var(--amber);
+    outline-offset: 4px;
+    border-radius: 2px;
   }
 
   .nav-links a:hover {
