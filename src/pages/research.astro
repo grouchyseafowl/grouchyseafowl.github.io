@@ -1,0 +1,90 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Research"
+  description="Five active research programs spanning Indigenous mound landscapes, movement ethnography, anti-trans legislation, AI welfare, and recognition & sentience."
+>
+  <div class="page-header">
+    <h1>Research</h1>
+    <p class="subtitle">Five active research programs connected by questions about recognition, power, and structural violence.</p>
+  </div>
+
+  <div class="research-programs">
+    <!-- Phase 2: Populate from agent briefing, scholarship summary, and voice document framing -->
+
+    <article class="card card--rose research-item">
+      <span class="tag">Archaeology · Landscape</span>
+      <h3>Indigenous Mound Landscapes</h3>
+      <p>
+        <!-- Phase 2: Content from Sweetgum manuscript, agent briefing -->
+        Placeholder for research program description. This section will be populated with
+        content from the primary sources, framed through the stories and tensions in the
+        voice document.
+      </p>
+    </article>
+
+    <article class="card card--rose research-item">
+      <span class="tag">Ethnography · Movements</span>
+      <h3>Weelaunee Forest / #StopCopCity</h3>
+      <p>
+        <!-- Phase 2: Content from fieldnotes, working papers -->
+        Placeholder for research program description.
+      </p>
+    </article>
+
+    <article class="card card--rose research-item">
+      <span class="tag">Genocide Studies · Trans Studies</span>
+      <h3>Anti-Trans Legislation</h3>
+      <p>
+        <!-- Phase 2: Content from publications, agent briefing -->
+        Placeholder for research program description.
+      </p>
+    </article>
+
+    <article class="card card--blue research-item">
+      <span class="tag">STS · AI · Anthropology</span>
+      <h3>Reframe: AI as Anthropological Site</h3>
+      <p>
+        <!-- Phase 2: Content from Reframe repo, working papers, magazine draft -->
+        Placeholder for research program description.
+      </p>
+    </article>
+
+    <article class="card card--blue research-item">
+      <span class="tag">Philosophy · Phenomenology</span>
+      <h3>Recognition and Sentience</h3>
+      <p>
+        <!-- Phase 2: Content from R&S outline, agent briefing -->
+        Placeholder for research program description.
+      </p>
+    </article>
+  </div>
+</BaseLayout>
+
+<style>
+  .research-programs {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+
+  .research-item {
+    padding: var(--space-xl);
+  }
+
+  .research-item .tag {
+    margin-bottom: var(--space-md);
+  }
+
+  .research-item h3 {
+    margin-bottom: var(--space-md);
+  }
+
+  .research-item p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 65ch;
+  }
+</style>

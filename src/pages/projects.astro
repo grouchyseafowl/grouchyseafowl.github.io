@@ -1,0 +1,115 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Projects"
+  description="Research tools and software built by L. June Bloch — Reframe, Autograder4Canvas, EvalEye, and more."
+>
+  <div class="page-header">
+    <h1>Projects</h1>
+    <p class="subtitle">Software that embodies the theoretical commitments, not just implements them.</p>
+  </div>
+
+  <!-- Phase 2: Populate from repo READMEs + voice document framing.
+       Frame through STORY, not just feature lists. Use social media content
+       from disabled_by_design/pipeline/content_queue/ for framing devices. -->
+
+  <div class="card-grid">
+    <article class="card">
+      <div class="project-header">
+        <h3>Reframe</h3>
+        <span class="tag">Python · 312 modules · 160K+ lines</span>
+      </div>
+      <p>
+        <!-- Phase 2: From Reframe README, magazine draft, voice document -->
+        A research and education platform that began as a question about what happens when
+        you let an AI system design its own analytical architecture. Placeholder for full description.
+      </p>
+      <a href="https://github.com/grouchyseafowl/Reframe" class="project-link mono">
+        github.com/grouchyseafowl/Reframe
+      </a>
+    </article>
+
+    <article class="card">
+      <div class="project-header">
+        <h3>Autograder4Canvas</h3>
+        <span class="tag">Python · Canvas LMS</span>
+      </div>
+      <p>
+        <!-- Phase 2: From Autograder README, research findings, social media threads -->
+        An automated grading tool for Canvas LMS that produced a headline finding:
+        "output format is the activation function for bias." Placeholder for full description.
+      </p>
+      <a href="https://github.com/grouchyseafowl/Autograder4Canvas" class="project-link mono">
+        github.com/grouchyseafowl/Autograder4Canvas
+      </a>
+    </article>
+
+    <article class="card">
+      <div class="project-header">
+        <h3>EvalEye</h3>
+        <span class="tag">Teaching Evaluations · Analysis</span>
+      </div>
+      <p>
+        <!-- Phase 2: From EvalEye docs -->
+        Placeholder for project description.
+      </p>
+    </article>
+
+    <article class="card">
+      <div class="project-header">
+        <h3>readthrough</h3>
+        <span class="tag">Python · Screenplay</span>
+      </div>
+      <p>
+        <!-- Phase 2: From readthrough README -->
+        A screenplay table read tool built for a creative project — a Mar&iacute;a Sabina
+        series by June's mother.
+      </p>
+      <a href="https://github.com/grouchyseafowl/readthrough" class="project-link mono">
+        github.com/grouchyseafowl/readthrough
+      </a>
+    </article>
+
+    <article class="card">
+      <div class="project-header">
+        <h3>Podcast-Editor</h3>
+        <span class="tag">Python · Audio</span>
+      </div>
+      <p>
+        <!-- Phase 2: From Podcast-Editor README -->
+        Built for a student project. Placeholder for description.
+      </p>
+      <a href="https://github.com/grouchyseafowl/Podcast-Editor" class="project-link mono">
+        github.com/grouchyseafowl/Podcast-Editor
+      </a>
+    </article>
+  </div>
+</BaseLayout>
+
+<style>
+  .project-header {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-md);
+  }
+
+  .project-header h3 {
+    font-family: var(--font-mono);
+    margin-bottom: 0;
+  }
+
+  .project-link {
+    display: inline-block;
+    margin-top: var(--space-md);
+    font-size: var(--text-sm);
+    color: var(--blue);
+  }
+
+  .project-link:hover {
+    color: var(--blue-bright);
+  }
+</style>

@@ -1,0 +1,47 @@
+---
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = 'Dr. L. June Bloch — anthropologist, ethnic studies scholar, and builder of research tools that interrogate constitutive power relations and structural violence.'
+} = Astro.props;
+
+const siteTitle = title === 'Home'
+  ? 'L. June Bloch — Anthropologist, Ethnic Studies Scholar, Builder'
+  : `${title} — L. June Bloch`;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={siteTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/images/headshot-rect.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <title>{siteTitle}</title>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <Nav />
+    <main id="main-content" class="container">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

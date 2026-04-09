@@ -1,0 +1,95 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="CV"
+  description="Curriculum vitae for Dr. L. June Bloch — anthropologist, ethnic studies scholar, and builder."
+>
+  <div class="page-header">
+    <h1>Curriculum Vitae</h1>
+  </div>
+
+  <div class="cv-download">
+    <!-- Phase 2: Add actual PDF -->
+    <a href="/files/Bloch_CV.pdf" class="cv-button" download>
+      Download CV (PDF)
+    </a>
+  </div>
+
+  <!-- Phase 2: Web-rendered CV sections from scholar profile + agent briefing -->
+
+  <section>
+    <h2>Education</h2>
+    <div class="cv-entry">
+      <p>Placeholder — to be populated from CV/scholar profile.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Academic Positions</h2>
+    <div class="cv-entry">
+      <p>Placeholder — to be populated from CV/scholar profile.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Publications</h2>
+    <div class="cv-entry">
+      <p>See <a href="/publications/">full publications list</a>.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Research Programs</h2>
+    <div class="cv-entry">
+      <p>See <a href="/research/">research overview</a>.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Teaching</h2>
+    <div class="cv-entry">
+      <p>See <a href="/teaching/">teaching overview</a>.</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .cv-download {
+    margin-bottom: var(--space-xl);
+  }
+
+  .cv-button {
+    display: inline-block;
+    padding: var(--space-md) var(--space-lg);
+    background: var(--bg-card);
+    border: 1px solid var(--amber-dim);
+    border-radius: 8px;
+    color: var(--amber);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: var(--text-base);
+    text-decoration: none;
+    transition: border-color var(--transition-base), background-color var(--transition-base);
+  }
+
+  .cv-button:hover {
+    border-color: var(--amber);
+    background: var(--bg-elevated);
+    text-decoration: none;
+  }
+
+  .cv-entry {
+    padding: var(--space-md) 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .cv-entry:last-child {
+    border-bottom: none;
+  }
+
+  section {
+    margin-bottom: var(--space-xl);
+  }
+</style>

@@ -1,0 +1,71 @@
+---
+
+---
+
+<footer>
+  <div class="container footer-inner">
+    <div class="footer-left">
+      <p class="footer-tagline">Humanist who builds.</p>
+      <p class="footer-copyright">&copy; {new Date().getFullYear()} L. June Bloch</p>
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/grouchyseafowl" aria-label="GitHub">GitHub</a>
+      <a href="https://bsky.app/profile/disabledbydesign.bsky.social" aria-label="Bluesky">Bluesky</a>
+      <a href="https://linkedin.com/in/" aria-label="LinkedIn">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer {
+    border-top: 1px solid var(--border);
+    padding: var(--space-xl) 0;
+    margin-top: var(--space-2xl);
+  }
+
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-lg);
+  }
+
+  .footer-tagline {
+    font-family: var(--font-display);
+    font-style: italic;
+    color: var(--text-muted);
+    font-size: var(--text-sm);
+    margin-bottom: var(--space-xs);
+  }
+
+  .footer-copyright {
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+    margin-bottom: 0;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: var(--space-lg);
+  }
+
+  .footer-links a {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+  }
+
+  .footer-links a:hover {
+    color: var(--amber);
+    text-decoration: none;
+  }
+
+  @media (max-width: 640px) {
+    .footer-inner {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+</style>

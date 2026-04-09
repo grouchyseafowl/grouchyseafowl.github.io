@@ -1,0 +1,86 @@
+# Portfolio Site — Agent Instructions
+
+Academic portfolio for Dr. L. June Bloch. Built with Astro, hosted on GitHub Pages.
+
+## Before Any Content Work
+
+**Read the universal briefing first:** `/Users/june/Documents/GitHub/profile/JUNE_BLOCH_AGENT_BRIEFING.md`
+
+This document contains June's full identity, story, publication record, research programs, and voice characteristics. Content on this site must reflect that document, not generic academic language.
+
+**Also read the social media voice/story materials** in `/Users/june/Documents/GitHub/disabled_by_design/voice/` — especially `VOICE_DOCUMENT.md` and `STORY_PROMPT_RESPONSES/`. These contain framing devices, personal stories, and ways June talks about her work that should shape how projects, research, and teaching are described on the site. Don't just list or describe — frame through story.
+
+## Design Constraints
+
+Read `DESIGN_SPECS.md` for the full design system. Key rules:
+
+- **Color palette** is drawn from the Autograder4Canvas interface. Warm amber + dusty rose + steel blue on dark backgrounds. Do not introduce new colors without updating the spec.
+- **Typography**: Fraunces (headings), DM Sans (body), JetBrains Mono (code/technical). Do not change fonts.
+- **Accessibility is a hard constraint.** WCAG 2.1 AA minimum. Test contrast ratios before changing any color usage. Never use rose (#CC5282) for body text — it doesn't meet contrast requirements.
+- **No generic AI aesthetics.** If a design choice could appear on any template site, it's wrong.
+
+## Content Sources
+
+When updating content, pull from these primary sources:
+
+- **Publications**: Scholar profile at `/Users/june/Documents/GitHub/profile/JUNE_BLOCH_AGENT_BRIEFING.md` (publications section)
+- **Scholarship summary**: `/Users/june/Documents/Filing/Job Search/synthesis/Bloch_Scholarship_Summary_For_Agents.md`
+- **Scholar profile**: `/Users/june/Documents/Filing/Job Search/Bloch_Scholar_Profile.md`
+- **Research programs**: Agent briefing (5 research programs section)
+- **Projects**: Read READMEs from `/Users/june/Documents/GitHub/Reframe/`, `/Users/june/Documents/GitHub/Autograder4Canvas/`, `/Users/june/Documents/GitHub/readthrough/`, `/Users/june/Documents/GitHub/Podcast-Editor/`
+- **EvalEye**: `/Users/june/Documents/Filing/Job Search/Teaching Evals/EvalEye/`
+- **Teaching**: `~/Documents/Teaching/2026courseplanning/`
+- **Social media content & framing**: `/Users/june/Documents/GitHub/disabled_by_design/pipeline/content_queue/` and `/Users/june/Documents/GitHub/disabled_by_design/voice/` — use these as **framing devices** for how to talk about the work. The social media threads and story prompt responses contain June's voice explaining her research and projects in accessible, story-driven ways. Use that texture instead of dry descriptions or feature lists.
+- **Consulting**: June has done transformative leadership consulting (formerly framed as DEI consulting). Get details from June for scope and framing.
+
+## Earlier Names
+
+June has published under Lee Bloch and Leigh Bloch. These are not hidden — include them with a note like "Earlier publications appear under previous names (Lee Bloch, Leigh Bloch)." The goal is legibility for readers tracing her publication record.
+
+## Structure
+
+- `src/pages/` — Astro page components (layout + content together for simple pages)
+- `src/layouts/` — Base layout with nav, footer, meta
+- `src/components/` — Reusable components (Nav, Footer, Card, etc.)
+- `src/styles/global.css` — Design system (colors, typography, spacing)
+- `content/` — Markdown content files (for pages that benefit from separating content from layout)
+- `public/images/` — Headshot, project screenshots, static assets
+
+## Build & Deploy
+
+```bash
+npm run dev      # local dev server
+npm run build    # production build
+npm run preview  # preview production build
+```
+
+Deployment is via GitHub Actions — push to main triggers build and deploy to GitHub Pages.
+
+## Key Principles
+
+1. **Story over list.** Research programs, projects, and teaching should be framed through narrative, not just described. Use the social media content and voice materials for framing inspiration.
+2. **The contrast is the message.** The site holds scholarly depth and technical building together. The typography (serif headings + sans body + mono code) embodies this. Don't flatten it.
+3. **Accessibility is non-negotiable.** June works on disability. The site must practice what it preaches.
+4. **Specificity over generality.** Named scholars, concrete findings, particular tensions. If a description could appear on any academic's site, rewrite it.
+5. **Low friction for June.** She reviews and approves. Agents maintain. The system should not require her initiative to stay current.
+
+## Phase 2 Content Notes
+
+Phase 2 populates the placeholder content. The agent doing Phase 2 must:
+
+1. **Read the full `JUNE_BLOCH_AGENT_BRIEFING.md`** — the entire document, not excerpts
+2. **Read the social media voice/story materials** — these provide framing devices (how June talks about her work in accessible, story-driven ways)
+3. **Frame through story, not lists.** Research programs should read like "here's the question that keeps me up at night" not "this research program examines..."
+4. **Include Multiverse School** on Teaching page under Professional Development
+5. **Include Transformative Leadership consulting** on Teaching page (get details from June)
+6. **Earlier names** (Lee Bloch, Leigh Bloch) are listed openly with context for readers
+7. **Populate publications** from agent briefing + scholar profile + Zotero MCP if available
+
+## Domain
+
+Target domain: `ljunebloch.com` (Cloudflare Registrar, ~$10.46/yr). Currently deploying to `grouchyseafowl.github.io`. When domain is purchased, update `astro.config.mjs` site URL and add CNAME file to `public/`.
+
+## Repo
+
+GitHub repo: `grouchyseafowl/grouchyseafowl.github.io`
+Deploy: GitHub Actions on push to main (`.github/workflows/deploy.yml`)

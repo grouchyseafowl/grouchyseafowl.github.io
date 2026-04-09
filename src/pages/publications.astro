@@ -1,0 +1,50 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Publications"
+  description="Publications by L. June Bloch in Cultural Anthropology, American Anthropologist, Current Anthropology, and other major journals."
+>
+  <div class="page-header">
+    <h1>Publications</h1>
+    <p class="subtitle">
+      Earlier publications appear under previous names (Lee Bloch, Leigh Bloch).
+    </p>
+  </div>
+
+  <!-- Phase 2: Populate from agent briefing publication list, scholar profile, Zotero -->
+
+  <section>
+    <h2>Journal Articles</h2>
+    <ul class="pub-list">
+      <li class="pub-item">
+        <span class="pub-year">YYYY</span>
+        <span class="pub-title">Article Title.</span>
+        <span class="pub-venue">Journal Name</span> Volume(Issue): pages.
+        <!-- Phase 2: Full publication entries with DOI links -->
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Book Chapters</h2>
+    <ul class="pub-list">
+      <li class="pub-item">
+        <span class="pub-year">YYYY</span>
+        <span class="pub-title">Chapter Title.</span>
+        In Editor (Ed.), <span class="pub-venue">Book Title</span>. Publisher.
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Works in Progress</h2>
+    <ul class="pub-list">
+      <li class="pub-item">
+        <span class="pub-title">Recognition and Sentience: What Are We Allowed to Feel?</span>
+        <span class="tag tag--rose" style="margin-left: 0.5em;">Book project</span>
+      </li>
+    </ul>
+  </section>
+</BaseLayout>
