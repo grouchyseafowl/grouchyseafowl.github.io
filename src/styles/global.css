@@ -419,7 +419,7 @@ section:last-child {
   display: flex;
   align-items: center;
   gap: var(--space-xl);
-  padding: var(--space-2xl) 0;
+  padding: var(--space-xl) 0 var(--space-lg) 0;
 }
 
 .hero-text {
@@ -510,7 +510,7 @@ section:last-child {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: var(--space-lg);
-  margin-top: var(--space-xl);
+  margin-top: var(--space-md);
 }
 
 .feature-link {
