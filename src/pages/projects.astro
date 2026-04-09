@@ -74,6 +74,35 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     <article class="card">
       <div class="project-header">
+        <h3>RoboStripper</h3>
+        <span class="tag">Python · PDF Processing</span>
+      </div>
+      <p>
+        <!-- Phase 2: From RoboStripper README -->
+        A PDF processing tool. Placeholder for full description.
+      </p>
+      <a href="https://github.com/grouchyseafowl/RoboStripper" class="project-link mono">
+        github.com/grouchyseafowl/RoboStripper
+      </a>
+    </article>
+
+    <article class="card">
+      <div class="project-header">
+        <h3>CGT Skill</h3>
+        <span class="tag tag--rose">Design Phase · Qualitative Analysis</span>
+      </div>
+      <p>
+        A Claude Code skill implementing constructivist grounded theory as a human-AI
+        collaborative workflow. Currently in design phase — mapping CGT methodology to
+        computational architecture.
+      </p>
+      <a href="https://github.com/grouchyseafowl/cgt-skill" class="project-link mono">
+        github.com/grouchyseafowl/cgt-skill
+      </a>
+    </article>
+
+    <article class="card">
+      <div class="project-header">
         <h3>Podcast-Editor</h3>
         <span class="tag">Python · Audio</span>
       </div>
@@ -107,6 +136,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     margin-top: var(--space-md);
     font-size: var(--text-sm);
     color: var(--blue);
+    overflow-wrap: break-word;
+    word-break: break-all;
   }
 
   .project-link:hover {

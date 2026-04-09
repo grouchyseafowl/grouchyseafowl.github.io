@@ -177,13 +177,11 @@ h1, h2, h3, h4 {
 h1 {
   font-size: var(--text-3xl);
   font-weight: 900;
-  text-shadow: 0 0 30px rgba(240, 168, 48, 0.2);
 }
 
 h2 {
   font-size: var(--text-2xl);
   margin-bottom: var(--space-lg);
-  text-shadow: 0 0 24px rgba(240, 168, 48, 0.15);
 }
 
 h3 {
@@ -320,7 +318,6 @@ section:last-child {
 
 .card h3 {
   color: var(--amber);
-  text-shadow: 0 0 20px rgba(240, 168, 48, 0.3);
 }
 
 .card p {
@@ -579,17 +576,14 @@ section:last-child {
 
 .amber {
   color: var(--amber);
-  text-shadow: 0 0 20px rgba(240, 168, 48, 0.3);
 }
 
 .rose {
   color: var(--rose);
-  text-shadow: 0 0 20px rgba(204, 82, 130, 0.35);
 }
 
 .blue {
   color: var(--blue);
-  text-shadow: 0 0 20px rgba(106, 154, 184, 0.35);
 }
 
 /* Rose highlight for key phrases — use sparingly */
@@ -598,10 +592,6 @@ section:last-child {
   font-weight: 500;
 }
 
-/* Phosphor glow on page header titles */
-.page-header h1 {
-  text-shadow: 0 0 30px rgba(240, 168, 48, 0.25);
-}
 
 .sr-only {
   position: absolute;
