@@ -562,14 +562,17 @@ section:last-child {
 
 .amber {
   color: var(--amber);
+  text-shadow: 0 0 20px rgba(240, 168, 48, 0.3);
 }
 
 .rose {
   color: var(--rose);
+  text-shadow: 0 0 20px rgba(204, 82, 130, 0.35);
 }
 
 .blue {
   color: var(--blue);
+  text-shadow: 0 0 20px rgba(106, 154, 184, 0.35);
 }
 
 /* Rose highlight for key phrases — use sparingly */
