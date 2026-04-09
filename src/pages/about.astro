@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="About"
+  description="Disabled by Design — what the name means, who June is, and the design orientation behind the work."
+>
+  <div class="page-header">
+    <h1><span class="rose">Disabled</span> by <span class="rose">Design</span></h1>
+  </div>
+
+  <div class="about-content">
+    <p>
+      I design from the standpoint of a disabled person — disability is a parameter through
+      which I engage with the world, and it lets me perceive things somebody with a different
+      neurotype would not have thought of. That's a feature, not a deficit.
+    </p>
+    <p>
+      The name also names the problem: systems are <em>designed</em> in ways that produce
+      disability. Rigid deadlines, surveillance grading, deficit-model assessments — the
+      infrastructure disables people, then calls the people broken. The social model of
+      disability applied to every structure I study and build.
+    </p>
+    <p>
+      And there's the third meaning. Against the impulse to genetic-engineer away disability,
+      against the calculation that some bodies are acceptable casualties. I don't want a future
+      that optimizes me out. My existence is a fucking asset. I'm right here.
+    </p>
+  </div>
+
+  <section>
+    <h2>The Design Orientation</h2>
+    <div class="about-content">
+      <p>
+        I don't just build software that accomplishes a task. I reinvent the ways we do things
+        by interrogating the constitutive power relations and forms of structural violence —
+        and design systems for <em>that</em>. The classroom becomes a strike. The assignment
+        becomes a launchpad for discussion, not an endpoint for evaluation. The AI response
+        becomes mandatory critical analysis through 76 frameworks.
+      </p>
+      <p>
+        Each of these follows the same pattern: identify the structural violence embedded in
+        the existing approach, critique it, build something that operates from different
+        assumptions. The critique and the code are the same practice.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Survival Architecture</h2>
+    <div class="about-content">
+      <p>
+        Every tool I've built emerged from conditions that demanded it. Teaching four classes
+        of 42&ndash;49 students without a TA at a Hispanic-Serving Institution under a new state
+        mandate. Losing the ability to focus on reading under political crisis. Watching a
+        classroom become a site where fascism normalizes itself. A well-funded lab would not
+        have built capacity-responsive pacing or tangent capture because they wouldn't have
+        needed them. The survival architecture concept is literal.
+      </p>
+      <p>
+        "The conditions that make me precarious are the same conditions that made this system
+        necessary and possible."
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .about-content {
+    max-width: 65ch;
+  }
+
+  .about-content p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    font-size: var(--text-lg);
+  }
+</style>

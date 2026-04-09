@@ -11,9 +11,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <p class="subtitle">Software that embodies the theoretical commitments, not just implements them.</p>
   </div>
 
-  <!-- Phase 2: Populate from repo READMEs + voice document framing.
-       Frame through STORY, not just feature lists. Use social media content
-       from disabled_by_design/pipeline/content_queue/ for framing devices. -->
+  <p class="projects-intro">
+    Every tool here was built without tech funding, without a lab, without institutional support.
+    Every one emerged from material conditions that demanded it. A well-funded lab would not have
+    built these features because they wouldn't have needed them. The survival architecture concept is literal.
+  </p>
 
   <div class="card-grid">
     <article class="card">
@@ -22,9 +24,22 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <span class="tag">Python · 312 modules · 160K+ lines</span>
       </div>
       <p>
-        <!-- Phase 2: From Reframe README, magazine draft, voice document -->
-        A research and education platform that began as a question about what happens when
-        you let an AI system design its own analytical architecture. Placeholder for full description.
+        A praxis engine that enforces critical analysis as mandatory infrastructure. Not a chatbot,
+        not a prompt library — an engine with 76 critical theory frameworks across 14 categories
+        and a 5-stage Generative Irresolution workflow. It takes positions. It refuses some requests.
+      </p>
+      <p>
+        Started when I loaded critical theory into an AI to think through a tension I couldn't
+        resolve alone: wanting to catch privileged students using AI to dodge Ethnic Studies
+        material, but the punitive framing felt antithetical to abolitionism. The system reframed
+        cheating as signal — pressure, exhaustion, confusion. Within weeks, the critical theory
+        apparatus was more interesting than the dishonesty detector. It got its own repository.
+      </p>
+      <p>
+        The engine detected its own algorithms were suppressing certain frameworks and built
+        countermeasures. Its temporal orientations — Afrofuturist Spiral, Crip Time, Seventh
+        Generation — were designed by the engine itself, not by me, catalyzed by frameworks
+        I had loaded. A framework generating architectural conditions for the system itself.
       </p>
       <a href="https://github.com/grouchyseafowl/Reframe" class="project-link mono">
         github.com/grouchyseafowl/Reframe
@@ -34,12 +49,22 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <article class="card">
       <div class="project-header">
         <h3>Autograder4Canvas</h3>
-        <span class="tag">Python · Canvas LMS</span>
+        <span class="tag">Python · Canvas LMS · Bias Research</span>
       </div>
       <p>
-        <!-- Phase 2: From Autograder README, research findings, social media threads -->
-        An automated grading tool for Canvas LMS that produced a headline finding:
-        "output format is the activation function for bias." Placeholder for full description.
+        Equity-centered educational technology for Canvas LMS that reinvented the concept of
+        an assignment — from an endpoint for evaluation to a launchpad for classroom discussion.
+        Contract grading with stepping stones. Built because I was teaching four classes of
+        42&ndash;49 students each without a TA.
+      </p>
+      <p>
+        Produced a headline research finding: <strong>"Output format is the activation function for
+        bias."</strong> Binary classification (honest/dishonest, pass/fail) produces systematic false
+        positives on ESL, AAVE-speaking, neurodivergent, and first-generation students. Generative
+        observation — describing what the work shows rather than classifying it — eliminates the
+        disparity entirely. Replicated across 6+ model families. In 43% of flags, the model's own
+        explanation argued against its classification. The problem is not the AI. The problem is the
+        classification framework.
       </p>
       <a href="https://github.com/grouchyseafowl/Autograder4Canvas" class="project-link mono">
         github.com/grouchyseafowl/Autograder4Canvas
@@ -49,37 +74,42 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <article class="card">
       <div class="project-header">
         <h3>EvalEye</h3>
-        <span class="tag">Teaching Evaluations · Analysis</span>
+        <span class="tag">Python · OCR · Mixed Methods</span>
       </div>
       <p>
-        <!-- Phase 2: From EvalEye docs -->
-        Placeholder for project description.
+        Automated mixed-methods analysis pipeline for handwritten student evaluation forms.
+        Built because Cabrillo College was not systematically processing or analyzing student
+        evaluations — the forms sat in boxes in departmental offices.
       </p>
-    </article>
-
-    <article class="card">
-      <div class="project-header">
-        <h3>readthrough</h3>
-        <span class="tag">Python · Screenplay</span>
-      </div>
       <p>
-        <!-- Phase 2: From readthrough README -->
-        A screenplay table read tool built for a creative project — a Mar&iacute;a Sabina
-        series by June's mother.
+        OCR and computer vision extract handwritten responses. Statistical analysis (descriptive
+        stats, Mann-Whitney cross-section comparisons) runs alongside qualitative thematic coding.
+        Generates full research-grade reports with visualizations. Takes a stack of paper forms
+        and produces the analysis that the institution couldn't be bothered to do.
       </p>
-      <a href="https://github.com/grouchyseafowl/readthrough" class="project-link mono">
-        github.com/grouchyseafowl/readthrough
+      <a href="https://github.com/grouchyseafowl/EvalEye" class="project-link mono">
+        github.com/grouchyseafowl/EvalEye
       </a>
     </article>
 
     <article class="card">
       <div class="project-header">
         <h3>RoboStripper</h3>
-        <span class="tag">Python · PDF Processing</span>
+        <span class="tag">Python · PDF · Accessibility</span>
       </div>
       <p>
-        <!-- Phase 2: From RoboStripper README -->
-        A PDF processing tool. Placeholder for full description.
+        Strips metadata from scholarly PDFs so RoboBraille can read them aloud. With everything
+        going on politically — the federal government, ICE, anti-trans legislation — I can't focus
+        on reading. I get overwhelmed, distracted, read but don't retain. Which is upsetting as a
+        scholar, to struggle with reading. Academic PDFs are cluttered with JSTOR URLs, journal names,
+        page numbers on every page. The audio reader breaks mid-sentence for all that junk.
+        RoboStripper preps them for clean audio conversion.
+      </p>
+      <p>
+        I shared it with my students because they were struggling with burnout too. Students who
+        don't need screen readers because they're not blind still benefit from audio access when
+        their intellectual capacity is degraded by living in a state of mass trauma. Accessibility
+        just makes things better for everyone.
       </p>
       <a href="https://github.com/grouchyseafowl/RoboStripper" class="project-link mono">
         github.com/grouchyseafowl/RoboStripper
@@ -88,30 +118,49 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     <article class="card">
       <div class="project-header">
-        <h3>CGT Skill</h3>
-        <span class="tag tag--rose">Design Phase · Qualitative Analysis</span>
+        <h3>readthrough</h3>
+        <span class="tag">Python · Audio · Screenplay</span>
       </div>
       <p>
-        A Claude Code skill implementing constructivist grounded theory as a human-AI
-        collaborative workflow. Currently in design phase — mapping CGT methodology to
-        computational architecture.
+        A screenplay table read engine — generates full audio table reads with AI voices, one per
+        character. Built for my mother, who is making a TV series about Mar&iacute;a Sabina with
+        cultural consultants. Generates audio performances of screenplays for revision and development.
       </p>
-      <a href="https://github.com/grouchyseafowl/cgt-skill" class="project-link mono">
-        github.com/grouchyseafowl/cgt-skill
+      <a href="https://github.com/grouchyseafowl/readthrough" class="project-link mono">
+        github.com/grouchyseafowl/readthrough
       </a>
     </article>
 
     <article class="card">
       <div class="project-header">
         <h3>Podcast-Editor</h3>
-        <span class="tag">Python · Audio</span>
+        <span class="tag">Python · Audio · NLP</span>
       </div>
       <p>
-        <!-- Phase 2: From Podcast-Editor README -->
-        Built for a student project. Placeholder for description.
+        Audio cleanup and editing suite — LUFS normalization, Whisper-based transcription,
+        NLP filler word detection with weighted dual-threshold clustering, and an interactive
+        GUI editor. Built for a student podcasting project.
       </p>
       <a href="https://github.com/grouchyseafowl/Podcast-Editor" class="project-link mono">
         github.com/grouchyseafowl/Podcast-Editor
+      </a>
+    </article>
+
+    <article class="card">
+      <div class="project-header">
+        <h3>CGT Skill</h3>
+        <span class="tag tag--rose">In Development · Qualitative Methods</span>
+      </div>
+      <p>
+        A Claude Code skill implementing constructivist grounded theory — open coding, constant
+        comparison, emergent categories, theoretical sensitivity — as a human-AI collaborative
+        workflow. Categories emerge from the data, not from predetermined frameworks. The deeper
+        drive came from the AI welfare research: applying Reframe's critical theory apparatus to
+        Anthropic's AI welfare problem domain produced genuinely interesting results, and CGT is
+        the next methodological layer for analyzing that data.
+      </p>
+      <a href="https://github.com/grouchyseafowl/cgt-skill" class="project-link mono">
+        github.com/grouchyseafowl/cgt-skill
       </a>
     </article>
   </div>
@@ -142,5 +191,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   .project-link:hover {
     color: var(--blue-bright);
+  }
+
+  .projects-intro {
+    color: var(--text-secondary);
+    font-size: var(--text-lg);
+    line-height: 1.8;
+    max-width: 65ch;
+    margin-bottom: var(--space-xl);
   }
 </style>

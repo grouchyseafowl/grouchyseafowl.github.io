@@ -11,35 +11,109 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <p class="subtitle">Courses in anthropology, ethnic studies, and Native American studies at a Hispanic-Serving Institution.</p>
   </div>
 
-  <!-- Phase 2: Populate from teaching materials, voice document, EvalEye data -->
-
   <section>
     <h2>Courses</h2>
     <div class="card-grid">
       <article class="card">
-        <h3>Introduction to Cultural Anthropology</h3>
-        <p class="text-secondary">Placeholder for course description.</p>
-      </article>
-
-      <article class="card">
         <h3>Introduction to Ethnic Studies</h3>
-        <p class="text-secondary">Placeholder for course description.</p>
+        <p class="text-secondary">
+          Cabrillo College (HSI, Santa Cruz, CA). Redesigned for the California Ethnic Studies
+          mandate under conditions of rising fascism, student exhaustion, and institutional
+          capture. The course operates through strike pedagogy — student self-organized,
+          consensus-based, horizontal. Emergency flex weeks with three pathways: survival
+          (check in, one point, glad you're alive), embodied knowledge (center self-care),
+          or community-based work. No late penalties. Reading equivalencies that include
+          embodied practice, elder interviews, community organizing, and zines.
+        </p>
       </article>
 
       <article class="card">
         <h3>Native American History &amp; Literature</h3>
-        <p class="text-secondary">Placeholder for course description.</p>
+        <p class="text-secondary">
+          Cabrillo College. More direct structure than ethnic studies — the demographics
+          are such that so many students are settlers, and there's an obligation to walk
+          them through the history more directly as a way of keeping settler ideologies from
+          recentering. Heavy emphasis on the California missions as precursors to fascist
+          systems: totalitarian control enacted on Indigenous bodies, normalizing gender
+          expression, movement, cultural expressions. Students learn to see current events
+          not as a rupture but as a pattern.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Introduction to Cultural Anthropology</h3>
+        <p class="text-secondary">
+          Taught across multiple institutions: Agnes Scott College, College of Charleston,
+          University of Virginia. Foundational course connecting four-field anthropology to
+          contemporary questions of power, knowledge, and structural violence.
+        </p>
       </article>
     </div>
+    <p class="courses-note">
+      Additional courses taught: Native American Studies, Archaeology, Visual Anthropology,
+      Museum Studies, Cultural Resource Management, Historical Archaeology.
+    </p>
   </section>
 
   <section>
     <h2>Teaching Philosophy</h2>
-    <div class="card">
+    <div class="card card--amber">
       <p>
-        <!-- Phase 2: From voice document, teaching materials, voicing research synthesis -->
-        Placeholder for teaching philosophy — drawn from June's actual practice, not generic
-        statements about "student-centered learning."
+        My work is about giving people language they need to imagine something different,
+        and hopefully more freeing. I start with Module -1: community resources — local
+        mutual aid, nonprofits, RoboBraille. Survival comes before learning.
+      </p>
+      <p>
+        Students have a source library they can choose from — agency over what they engage with.
+        Once per week they can substitute a reading with an equivalency: embodied practice,
+        interviewing an elder, community organizing, life experience reflection. The idea is
+        to let students actually <em>practice</em> ethnic studies and get credit for it.
+        Zines count as readings — community knowledge.
+      </p>
+      <p>
+        No late penalties, enabled by Autograder automation. I accept this may cause students
+        to deprioritize my class relative to more rigid professors, but rigid deadlines are
+        authoritarian pedagogy — habituating ourselves and our students into authoritarianism.
+        The burnout pool model: any given week, individual students float in and out. Not
+        everyone will do their readings all the time, but enough people will do them enough
+        of the time to have good conversations. The goal: make the classroom survivable for
+        everyone, including me.
+      </p>
+      <p>
+        If ethnic studies can't help us adapt and build more resilient communities in the
+        transition to a police state, we're probably not doing ethnic studies right.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Strike Pedagogy</h2>
+    <div class="card card--amber">
+      <p>
+        I didn't adopt strike pedagogy — I developed it. I was barely holding on. I needed
+        to fundamentally restructure how I did things, or I was going to quit the job. I shifted
+        from planned curriculum to a consensus-based, student self-organized horizontal model.
+      </p>
+      <p>
+        What happened was extremely pedagogically productive precisely because it was difficult.
+        Students floundered. They had to struggle. They became frustrated. They really just
+        didn't know what to do with their own power. I sat in the back. It decentered their
+        relationship to me as the figure of authority at the center of the power structure.
+        At one point, students literally had to look around the room and see who else was there.
+      </p>
+      <p>
+        Because I was no longer responsible for making everything happen, I could observe.
+        I am an anthropologist. I am a social scientist. This is what I do. Students who
+        were quite skilled at doing the conceptual level were not able to do the practice.
+        I told them that once they learn how to stop making themselves miserable, they'll
+        have a lot of fun. And that was a mistake. I should never have told them that.
+        I was right, but I should not have told them that, because they just got mad.
+      </p>
+      <p class="pub-refs">
+        The framework honors the 1968&ndash;69 student strikes at SF State and UC Berkeley that
+        created Ethnic Studies as a discipline. Documented in a 50-page pedagogical booklet
+        and a zine: <em>ETHN-1 Is Now a Strike: Ethnic Studies in a Time of State Multiculturalism
+        and a Neofascist Coup</em>.
       </p>
     </div>
   </section>
@@ -60,11 +134,37 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section>
     <h2>Consulting</h2>
     <div class="card">
-      <h3>Transformative Leadership</h3>
+      <h3>Transformative Leadership Consulting</h3>
       <p>
-        <!-- Phase 2: Details from June about consulting work scope and framing -->
-        Placeholder for consulting work description.
+        Independent equity and inclusion consulting through iChange Collaborative / Both And
+        Partners (2016&ndash;present). Ongoing work running parallel to academic appointments,
+        reflecting the same commitment to institutional transformation that drives the scholarly
+        work and the tooling.
+      </p>
+      <p class="text-secondary" style="font-style: italic;">
+        Details on scope and framing forthcoming.
       </p>
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  .courses-note {
+    color: var(--text-muted);
+    font-size: var(--text-sm);
+    margin-top: var(--space-lg);
+  }
+
+  .pub-refs {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: var(--space-md);
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--border);
+  }
+
+  .text-secondary {
+    color: var(--text-secondary);
+  }
+</style>

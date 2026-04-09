@@ -75,6 +75,9 @@ Phase 2 populates the placeholder content. The agent doing Phase 2 must:
 5. **Include Transformative Leadership consulting** on Teaching page (get details from June)
 6. **Earlier names** (Lee Bloch, Leigh Bloch) are listed openly with context for readers
 7. **Populate publications** from agent briefing + scholar profile + Zotero MCP if available
+8. **"Disabled by Design" explainer** — add a section on the home page (below the hero) explaining the concept: systems are designed in ways that produce disability, and redesigning them requires interrogating constitutive power relations. Connect it to the Bluesky handle (@disabledbydesign.bsky.social) and the scholarly work. This is the site's framing concept, not just a brand name.
+9. **Add RoboStripper and CGT Skill** to Projects page. CGT skill source: `/Users/june/Documents/Teaching/2026courseplanning/cgt_skill/`. RoboStripper: `/Users/june/Documents/GitHub/RoboStripper/`
+10. **Clean headshot needed** — current images have "DISABLED BY DESIGN" text overlay. Either get a clean version from June or CSS-crop the existing one. A clean professional headshot is better for job search contexts.
 
 ## Domain
 

@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Contact"
+  description="Get in touch with Dr. L. June Bloch — email, social media, and professional links."
+>
+  <div class="page-header">
+    <h1>Contact</h1>
+    <p class="subtitle">For academic inquiries, speaking, collaboration, or just saying hello.</p>
+  </div>
+
+  <div class="contact-grid">
+    <div class="card contact-card">
+      <h3>Email</h3>
+      <p>
+        <a href="mailto:june@ljunebloch.com" class="contact-link">june@ljunebloch.com</a>
+      </p>
+      <p class="text-secondary">Best for academic inquiries, collaboration proposals, and speaking invitations.</p>
+    </div>
+
+    <div class="card contact-card">
+      <h3>Bluesky</h3>
+      <p>
+        <a href="https://bsky.app/profile/disabledbydesign.bsky.social" class="contact-link">@disabledbydesign.bsky.social</a>
+      </p>
+      <p class="text-secondary">Where I post about research, teaching, AI, and structural violence. Academic/STS community.</p>
+    </div>
+
+    <div class="card contact-card">
+      <h3>Google Scholar</h3>
+      <p>
+        <a href="https://scholar.google.com/citations?user=9bQ8kjIAAAAJ&hl=en&oi=ao" class="contact-link">Scholar profile</a>
+      </p>
+      <p class="text-secondary">Full publication record and citation data.</p>
+    </div>
+
+    <div class="card contact-card">
+      <h3>GitHub</h3>
+      <p>
+        <a href="https://github.com/grouchyseafowl" class="contact-link mono">grouchyseafowl</a>
+      </p>
+      <p class="text-secondary">All projects are open source. Reframe, Autograder4Canvas, EvalEye, and more.</p>
+    </div>
+
+    <div class="card contact-card">
+      <h3>LinkedIn</h3>
+      <p>
+        <a href="https://www.linkedin.com/in/l-june-bloch-1897a329/" class="contact-link">L. June Bloch</a>
+      </p>
+      <p class="text-secondary">Professional network and career history.</p>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--space-lg);
+  }
+
+  .contact-card h3 {
+    margin-bottom: var(--space-sm);
+  }
+
+  .contact-link {
+    font-size: var(--text-lg);
+    font-weight: 500;
+  }
+
+  .text-secondary {
+    color: var(--text-secondary);
+    font-size: var(--text-sm);
+  }
+</style>

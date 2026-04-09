@@ -10,89 +10,179 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <h1>Curriculum Vitae</h1>
   </div>
 
-  <div class="cv-download">
-    <!-- Phase 2: Add actual PDF -->
-    <a href="/files/Bloch_CV.pdf" class="cv-button" download>
-      Download CV (PDF)
-    </a>
+  <div class="cv-layout">
+    <div class="cv-main">
+
+      <section class="card cv-section">
+        <h2>Education</h2>
+        <div class="cv-entry">
+          <div class="cv-when">2018</div>
+          <div class="cv-what">
+            <p><strong>Ph.D., Anthropology</strong> &mdash; University of Virginia</p>
+            <p class="cv-detail">Advisor: Jeffrey Hantman. Dissertation: <em>Sweetgum's Amber: Animate Mound Landscapes and the Nonlinear Longue Dur&eacute;e in the Native South</em></p>
+          </div>
+        </div>
+        <div class="cv-entry">
+          <div class="cv-when">2014</div>
+          <div class="cv-what">
+            <p><strong>M.A., Anthropology</strong> &mdash; University of Virginia</p>
+          </div>
+        </div>
+        <div class="cv-entry">
+          <div class="cv-when">2011</div>
+          <div class="cv-what">
+            <p><strong>B.A., Anthropology / Gender Studies</strong> &mdash; New College of Florida</p>
+            <p class="cv-detail">Honors Thesis: <em>An Anthropology of Remembering: Queer Theory, Collaborative Archaeology, and the Apalachee Past</em></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="card cv-section">
+        <h2>Academic Positions</h2>
+        <div class="cv-entry">
+          <div class="cv-when">2025&ndash;</div>
+          <div class="cv-what">
+            <p><strong>Professor of Ethnic Studies</strong> &mdash; Cabrillo College</p>
+            <p class="cv-detail">Hispanic-Serving Institution, Santa Cruz, CA.</p>
+          </div>
+        </div>
+        <div class="cv-entry">
+          <div class="cv-when">2024&ndash;25</div>
+          <div class="cv-what">
+            <p><strong>Visiting Assistant Professor</strong> &mdash; College of Charleston</p>
+          </div>
+        </div>
+        <div class="cv-entry">
+          <div class="cv-when">2020&ndash;24</div>
+          <div class="cv-what">
+            <p><strong>Visiting Assistant Professor / Instructor</strong> &mdash; Agnes Scott College</p>
+          </div>
+        </div>
+        <div class="cv-entry">
+          <div class="cv-when">2018&ndash;20</div>
+          <div class="cv-what">
+            <p><strong>Florence Levy Kay Fellow</strong> &mdash; Brandeis University</p>
+            <p class="cv-detail">Founded first NAIS curriculum at Brandeis.</p>
+          </div>
+        </div>
+        <div class="cv-entry">
+          <div class="cv-when">2016</div>
+          <div class="cv-what">
+            <p><strong>Instructor</strong> &mdash; University of Virginia</p>
+          </div>
+        </div>
+        <div class="cv-entry">
+          <div class="cv-when">2011&ndash;12</div>
+          <div class="cv-what">
+            <p><strong>AmeriCorps VISTA</strong> &mdash; University of Miami</p>
+            <p class="cv-detail">Office of Civic and Community Engagement.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="card cv-section">
+        <h2>Consulting</h2>
+        <div class="cv-entry">
+          <div class="cv-when">2016&ndash;</div>
+          <div class="cv-what">
+            <p><strong>Transformative Leadership Consulting</strong></p>
+            <p class="cv-detail">iChange Collaborative / Both And Partners. Independent equity and inclusion consulting.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="card cv-section">
+        <h2>Grants &amp; Funding</h2>
+        <div class="cv-entry">
+          <div class="cv-when">$15,000</div>
+          <div class="cv-what"><p>NSF Doctoral Dissertation Research Improvement</p></div>
+        </div>
+        <div class="cv-entry">
+          <div class="cv-when">$15,000</div>
+          <div class="cv-what"><p>Wenner-Gren Foundation</p></div>
+        </div>
+        <div class="cv-entry">
+          <div class="cv-when">$3,500</div>
+          <div class="cv-what"><p>American Philosophical Society</p></div>
+        </div>
+        <div class="cv-entry">
+          <div class="cv-when">$4,000</div>
+          <div class="cv-what"><p>Explorers Club</p></div>
+        </div>
+        <div class="cv-entry">
+          <div class="cv-when">~$22,000</div>
+          <div class="cv-what"><p>Multiple University of Virginia internal grants</p></div>
+        </div>
+        <p class="cv-detail" style="margin-top: var(--space-md); padding-left: calc(6rem + var(--space-lg));">All grants funded anthropological fieldwork. All tech projects were built without any tech funding.</p>
+      </section>
+
+      <section class="card cv-section">
+        <h2>Languages</h2>
+        <div class="cv-langs">
+          <span>English <em class="cv-detail">(native)</em></span>
+          <span>Spanish <em class="cv-detail">(conversational)</em></span>
+          <span>Muscogee <em class="cv-detail">(beginner)</em></span>
+        </div>
+      </section>
+
+    </div>
+
+    <aside class="cv-sidebar">
+      <div class="card cv-sidebar-card">
+        <a href="/files/Bloch_CV.pdf" class="cv-button" download>
+          Download CV (PDF)
+        </a>
+      </div>
+
+      <div class="card cv-sidebar-card">
+        <h3>See Also</h3>
+        <nav class="cv-nav" aria-label="Related sections">
+          <a href="/publications/">Publications</a>
+          <a href="/research/">Research Programs</a>
+          <a href="/projects/">Projects</a>
+          <a href="/teaching/">Teaching</a>
+        </nav>
+      </div>
+    </aside>
   </div>
-
-  <!-- Phase 2: Web-rendered CV sections from scholar profile + agent briefing -->
-
-  <section>
-    <h2>Education</h2>
-    <div class="cv-entry">
-      <p>Placeholder — to be populated from CV/scholar profile.</p>
-    </div>
-  </section>
-
-  <section>
-    <h2>Academic Positions</h2>
-    <div class="cv-entry">
-      <p>Placeholder — to be populated from CV/scholar profile.</p>
-    </div>
-  </section>
-
-  <section>
-    <h2>Publications</h2>
-    <div class="cv-entry">
-      <p>See <a href="/publications/">full publications list</a>.</p>
-    </div>
-  </section>
-
-  <section>
-    <h2>Research Programs</h2>
-    <div class="cv-entry">
-      <p>See <a href="/research/">research overview</a>.</p>
-    </div>
-  </section>
-
-  <section>
-    <h2>Teaching</h2>
-    <div class="cv-entry">
-      <p>See <a href="/teaching/">teaching overview</a>.</p>
-    </div>
-  </section>
 </BaseLayout>
 
 <style>
-  .cv-download {
-    margin-bottom: var(--space-xl);
+  .cv-layout {
+    display: grid;
+    grid-template-columns: 1fr 220px;
+    gap: var(--space-xl);
+    align-items: start;
   }
 
-  .cv-button {
-    display: inline-block;
-    padding: var(--space-md) var(--space-lg);
-    background: var(--bg-input);
-    border: 1px solid var(--amber-dim);
-    border-radius: 8px;
-    color: var(--amber);
-    font-family: var(--font-body);
-    font-weight: 600;
-    font-size: var(--text-base);
-    text-decoration: none;
-    transition: border-color var(--transition-base), background-color var(--transition-base), box-shadow var(--transition-base);
-    background-image:
-      radial-gradient(ellipse at 40% 30%, rgba(240, 168, 48, 0.10) 0%, transparent 60%);
-    box-shadow:
-      0 2px 4px rgba(0, 0, 0, 0.6),
-      0 6px 16px rgba(0, 0, 0, 0.4),
-      inset 0 1px 0 rgba(240, 168, 48, 0.08);
+  @media (max-width: 900px) {
+    .cv-layout {
+      grid-template-columns: 1fr;
+    }
+
+    .cv-sidebar {
+      order: -1;
+    }
   }
 
-  .cv-button:hover {
-    border-color: var(--amber);
-    background-color: var(--bg-elevated);
-    text-decoration: none;
-    box-shadow:
-      0 4px 12px rgba(0, 0, 0, 0.5),
-      0 10px 28px rgba(0, 0, 0, 0.4),
-      0 0 20px rgba(240, 168, 48, 0.08),
-      inset 0 1px 0 rgba(240, 168, 48, 0.10);
+  /* Main column */
+  .cv-section {
+    padding: var(--space-xl);
+    margin-bottom: var(--space-lg);
+  }
+
+  .cv-section h2 {
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-sm);
+    border-bottom: 1px solid var(--border);
   }
 
   .cv-entry {
-    padding: var(--space-md) 0;
+    display: grid;
+    grid-template-columns: 6rem 1fr;
+    gap: var(--space-lg);
+    padding: var(--space-sm) 0;
     border-bottom: 1px solid var(--border);
   }
 
@@ -100,7 +190,90 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     border-bottom: none;
   }
 
-  section {
-    margin-bottom: var(--space-xl);
+  .cv-when {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    color: var(--amber-dim);
+    padding-top: 0.15em;
+    text-align: right;
+  }
+
+  .cv-what p {
+    margin-bottom: 0;
+  }
+
+  .cv-detail {
+    color: var(--text-secondary);
+    font-size: var(--text-sm);
+    font-style: normal;
+  }
+
+  .cv-langs {
+    display: flex;
+    gap: var(--space-xl);
+  }
+
+  .cv-langs span {
+    color: var(--text-primary);
+  }
+
+  /* Sidebar */
+  .cv-sidebar {
+    position: sticky;
+    top: calc(64px + var(--space-lg));
+  }
+
+  .cv-sidebar-card {
+    padding: var(--space-lg);
+    margin-bottom: var(--space-lg);
+  }
+
+  .cv-sidebar-card h3 {
+    font-size: var(--text-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    font-family: var(--font-body);
+    margin-bottom: var(--space-md);
+  }
+
+  .cv-button {
+    display: block;
+    text-align: center;
+    padding: var(--space-md);
+    background: var(--bg-input);
+    border: 1px solid var(--amber-dim);
+    border-radius: 6px;
+    color: var(--amber);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: var(--text-sm);
+    text-decoration: none;
+    transition: border-color var(--transition-base), background-color var(--transition-base);
+  }
+
+  .cv-button:hover {
+    border-color: var(--amber);
+    background-color: var(--bg-elevated);
+    text-decoration: none;
+  }
+
+  .cv-nav {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .cv-nav a {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: var(--space-xs) 0;
+    transition: color var(--transition-fast);
+  }
+
+  .cv-nav a:hover {
+    color: var(--amber);
+    text-decoration: none;
   }
 </style>

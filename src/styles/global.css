@@ -160,9 +160,24 @@ a[href^="http"]::after {
   vertical-align: baseline;
 }
 
+/* Mail links get an envelope icon */
+a[href^="mailto:"]::after {
+  content: '';
+  display: inline-block;
+  width: 0.7em;
+  height: 0.7em;
+  margin-left: 0.25em;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236A9AB8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z'/%3E%3Cpolyline points='22,6 12,13 2,6'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: baseline;
+}
+
 /* Don't add external icon to nav or footer links */
 nav a[href^="http"]::after,
-footer a[href^="http"]::after {
+footer a[href^="http"]::after,
+nav a[href^="mailto:"]::after,
+footer a[href^="mailto:"]::after {
   display: none;
 }
 
