@@ -299,21 +299,23 @@ section:last-child {
   padding: var(--space-lg);
   transition: border-color var(--transition-base), box-shadow var(--transition-base);
   background-image:
-    radial-gradient(ellipse at 30% 20%, rgba(240, 168, 48, 0.06) 0%, transparent 60%),
-    radial-gradient(ellipse at 70% 80%, rgba(240, 168, 48, 0.02) 0%, transparent 50%);
+    radial-gradient(ellipse at 30% 20%, rgba(240, 168, 48, 0.10) 0%, transparent 55%),
+    radial-gradient(ellipse at 75% 85%, rgba(240, 168, 48, 0.04) 0%, transparent 45%);
   box-shadow:
-    0 1px 3px rgba(0, 0, 0, 0.4),
-    0 4px 12px rgba(0, 0, 0, 0.2),
-    inset 0 1px 0 rgba(240, 168, 48, 0.04);
+    0 2px 4px rgba(0, 0, 0, 0.5),
+    0 6px 20px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(240, 168, 48, 0.08),
+    inset 0 0 30px rgba(240, 168, 48, 0.02);
 }
 
 .card:hover {
   border-color: var(--border-hover);
   box-shadow:
-    0 2px 8px rgba(0, 0, 0, 0.4),
-    0 8px 24px rgba(0, 0, 0, 0.3),
-    0 0 20px rgba(240, 168, 48, 0.06),
-    inset 0 1px 0 rgba(240, 168, 48, 0.06);
+    0 4px 12px rgba(0, 0, 0, 0.5),
+    0 12px 32px rgba(0, 0, 0, 0.4),
+    0 0 30px rgba(240, 168, 48, 0.08),
+    inset 0 1px 0 rgba(240, 168, 48, 0.10),
+    inset 0 0 40px rgba(240, 168, 48, 0.03);
 }
 
 .card h3 {
@@ -474,15 +476,12 @@ section:last-child {
 }
 
 .hero-image img {
-  width: 260px;
+  width: 286px;
   height: auto;
   border-radius: 8px;
   object-fit: cover;
   border: 3px solid var(--border);
-  transition: border-color var(--transition-base);
 }
-
-/* No hover effect on headshot — it's not a link */
 
 @media (max-width: 768px) {
   .hero {
@@ -504,7 +503,7 @@ section:last-child {
   }
 
   .hero-image img {
-    width: 200px;
+    width: 286px;
   }
 }
 
@@ -536,11 +535,12 @@ section:last-child {
   border-radius: 8px;
   transition: border-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
   background-image:
-    radial-gradient(ellipse at 40% 30%, rgba(240, 168, 48, 0.05) 0%, transparent 60%);
+    radial-gradient(ellipse at 40% 30%, rgba(240, 168, 48, 0.10) 0%, transparent 55%);
   box-shadow:
-    0 1px 3px rgba(0, 0, 0, 0.4),
-    0 4px 12px rgba(0, 0, 0, 0.2),
-    inset 0 1px 0 rgba(240, 168, 48, 0.04);
+    0 2px 4px rgba(0, 0, 0, 0.5),
+    0 6px 20px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(240, 168, 48, 0.08),
+    inset 0 0 30px rgba(240, 168, 48, 0.02);
 }
 
 .feature-link:hover {
@@ -548,9 +548,11 @@ section:last-child {
   transform: translateY(-2px);
   text-decoration: none;
   box-shadow:
-    0 4px 16px rgba(0, 0, 0, 0.4),
-    0 8px 32px rgba(0, 0, 0, 0.2),
-    0 0 24px rgba(240, 168, 48, 0.06);
+    0 4px 12px rgba(0, 0, 0, 0.5),
+    0 12px 32px rgba(0, 0, 0, 0.4),
+    0 0 30px rgba(240, 168, 48, 0.08),
+    inset 0 1px 0 rgba(240, 168, 48, 0.10),
+    inset 0 0 40px rgba(240, 168, 48, 0.03);
 }
 
 .feature-link h3 {
