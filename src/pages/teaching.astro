@@ -13,54 +13,41 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <section>
     <h2>Courses</h2>
-    <div class="card-grid">
-      <article class="card">
-        <h3>Introduction to Ethnic Studies</h3>
-        <p class="text-secondary">
-          Cabrillo College (HSI, Santa Cruz, CA). Redesigned for the California Ethnic Studies
-          mandate under conditions of rising fascism, student exhaustion, and institutional
-          capture. The course operates through strike pedagogy — student self-organized,
-          consensus-based, horizontal. Emergency flex weeks with three pathways: survival
-          (check in, one point, glad you're alive), embodied knowledge (center self-care),
-          or community-based work. No late penalties. Reading equivalencies that include
-          embodied practice, elder interviews, community organizing, and zines.
-        </p>
-      </article>
+    <div class="course-grid">
 
-      <article class="card">
-        <h3>Native American History &amp; Literature</h3>
-        <p class="text-secondary">
-          Cabrillo College. More direct structure than ethnic studies — the demographics
-          are such that so many students are settlers, and there's an obligation to walk
-          them through the history more directly as a way of keeping settler ideologies from
-          recentering. Heavy emphasis on the California missions as precursors to fascist
-          systems: totalitarian control enacted on Indigenous bodies, normalizing gender
-          expression, movement, cultural expressions. Students learn to see current events
-          not as a rupture but as a pattern.
-        </p>
-      </article>
+      <div class="course-group">
+        <h3>Ethnic Studies &amp; Native American Studies</h3>
+        <ul class="course-list">
+          <li>Introduction to Ethnic Studies <span class="where">Cabrillo</span></li>
+          <li>Native American History and Literature I &amp; II <span class="where">Cabrillo</span></li>
+          <li>Deep Historical Perspectives on Native North America <span class="where">Brandeis, Charleston, Agnes Scott</span></li>
+          <li>Indigenous Peoples, Settler Colonialism, and Decolonization <span class="where">Brandeis, Agnes Scott</span></li>
+          <li>Indigenous Ecologies <span class="where">Brandeis</span></li>
+        </ul>
+      </div>
 
-      <article class="card">
-        <h3>Introduction to Cultural Anthropology</h3>
-        <p class="text-secondary">
-          Taught across multiple institutions: Agnes Scott College, College of Charleston,
-          University of Virginia. Foundational course connecting four-field anthropology to
-          contemporary questions of power, knowledge, and structural violence.
-        </p>
-      </article>
+      <div class="course-group">
+        <h3>Anthropology</h3>
+        <ul class="course-list">
+          <li>Introduction to Anthropology <span class="where">Charleston, Agnes Scott</span></li>
+          <li>The Anthropology of Violence <span class="where">Agnes Scott</span></li>
+          <li>Anthropology of Religion <span class="where">UVA</span></li>
+          <li>Rethinking Museums: Critical Heritage Studies <span class="where">Agnes Scott</span></li>
+          <li>Worlds of Culture: Global Ethnography (Life in the Post-Apocalypse) <span class="where">Agnes Scott</span></li>
+          <li>Ethnography of the Weelaunee Forest Movement <span class="where">Agnes Scott</span></li>
+          <li>Afterlives of Empire <span class="where">Agnes Scott</span></li>
+          <li>Global Journeys: Social Memory and Politics of the Past <span class="where">Agnes Scott</span></li>
+        </ul>
+      </div>
+
     </div>
-    <p class="courses-note">
-      Additional courses taught: Native American Studies, Archaeology, Visual Anthropology,
-      Museum Studies, Cultural Resource Management, Historical Archaeology.
-    </p>
   </section>
 
-  <section>
-    <h2>Teaching Philosophy</h2>
-    <div class="card card--amber">
+  <section class="teaching-boxes">
+    <div class="card teaching-box">
+      <h3>Teaching Philosophy</h3>
       <p>
-        My work is about giving people language they need to imagine something different,
-        and hopefully more freeing. I start with Module -1: community resources — local
+        My classes start with Module -1: community resources — local
         mutual aid, nonprofits, RoboBraille. Survival comes before learning.
       </p>
       <p>
@@ -84,84 +71,91 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         transition to a police state, we're probably not doing ethnic studies right.
       </p>
     </div>
-  </section>
 
-  <section>
-    <h2>Strike Pedagogy</h2>
-    <div class="card card--amber">
+    <div class="card teaching-box">
+      <h3>Ethnic Studies Is a Strike</h3>
       <p>
-        I didn't adopt strike pedagogy — I developed it. I was barely holding on. I needed
-        to fundamentally restructure how I did things, or I was going to quit the job. I shifted
-        from planned curriculum to a consensus-based, student self-organized horizontal model.
+        Ethnic Studies was created by student strikes — the 1968&ndash;69 strikes at SF State
+        and UC Berkeley. The pedagogy should honor that history. There is also a contradiction
+        between the field I'm taught to teach and its implementation by state mandate — voluntary
+        participation is my answer to that contradiction. I developed a consensus-based,
+        student self-organized, horizontal model rooted in the discipline's origins in direct
+        action. At first, students didn't know what to do with their own power. That was the point.
       </p>
       <p>
-        What happened was extremely pedagogically productive precisely because it was difficult.
-        Students floundered. They had to struggle. They became frustrated. They really just
-        didn't know what to do with their own power. I sat in the back. It decentered their
-        relationship to me as the figure of authority at the center of the power structure.
-        At one point, students literally had to look around the room and see who else was there.
+        I sat in the back. It decentered their relationship to me as the authority at the
+        center of the power structure. At one point, students literally had to look around
+        the room and see who else was there. Because I was no longer responsible for making
+        everything happen, I could observe — I am an anthropologist, this is what I do.
       </p>
       <p>
-        Because I was no longer responsible for making everything happen, I could observe.
-        I am an anthropologist. I am a social scientist. This is what I do. Students who
-        were quite skilled at doing the conceptual level were not able to do the practice.
-        I told them that once they learn how to stop making themselves miserable, they'll
-        have a lot of fun. And that was a mistake. I should never have told them that.
-        I was right, but I should not have told them that, because they just got mad.
-      </p>
-      <p class="pub-refs">
-        The framework honors the 1968&ndash;69 student strikes at SF State and UC Berkeley that
-        created Ethnic Studies as a discipline. Documented in a 50-page pedagogical booklet
-        and a zine: <em>ETHN-1 Is Now a Strike: Ethnic Studies in a Time of State Multiculturalism
-        and a Neofascist Coup</em>.
+        What students learned: intrinsic inquiry — to follow their own direction based on
+        what they actually care about. They learned to work with others. And they didn't
+        just learn ethnic studies in theory — they had to learn it in practice.
       </p>
     </div>
   </section>
 
-  <section>
-    <h2>Professional Development</h2>
-    <div class="card">
-      <h3>Multiverse School</h3>
-      <p>
-        Continuing engagement with AI pedagogy and agentic development communities.
-        Completed coursework in AI for Creatives. Ongoing participation in daily
-        professional standup and collaborative learning. Upcoming: Agentic SDLC,
-        Introduction to Agents.
-      </p>
-    </div>
-  </section>
 
-  <section>
-    <h2>Consulting</h2>
-    <div class="card">
-      <h3>Transformative Leadership Consulting</h3>
-      <p>
-        Independent equity and inclusion consulting through iChange Collaborative / Both And
-        Partners (2016&ndash;present). Ongoing work running parallel to academic appointments,
-        reflecting the same commitment to institutional transformation that drives the scholarly
-        work and the tooling.
-      </p>
-      <p class="text-secondary" style="font-style: italic;">
-        Details on scope and framing forthcoming.
-      </p>
-    </div>
-  </section>
 </BaseLayout>
 
 <style>
-  .courses-note {
-    color: var(--text-muted);
-    font-size: var(--text-sm);
-    margin-top: var(--space-lg);
+  .course-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
   }
 
-  .pub-refs {
+  @media (max-width: 700px) {
+    .course-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .course-group h3 {
     font-size: var(--text-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--amber-dim);
+    margin-bottom: var(--space-sm);
+  }
+
+  .course-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  .course-list li {
+    font-size: var(--text-sm);
+    color: var(--text-primary);
+    line-height: 1.5;
+  }
+
+  .where {
     color: var(--text-muted);
-    font-style: italic;
-    margin-top: var(--space-md);
-    padding-top: var(--space-md);
-    border-top: 1px solid var(--border);
+    font-size: var(--text-xs);
+  }
+
+  .teaching-boxes {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+
+  .teaching-box {
+    padding: var(--space-lg) var(--space-xl);
+  }
+
+  .teaching-box h3 {
+    margin-bottom: var(--space-md);
+  }
+
+  .teaching-box p {
+    color: var(--text-secondary);
+    line-height: 1.8;
   }
 
   .text-secondary {

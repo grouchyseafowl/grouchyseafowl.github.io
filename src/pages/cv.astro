@@ -6,8 +6,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   title="CV"
   description="Curriculum vitae for Dr. L. June Bloch — anthropologist, ethnic studies scholar, and builder."
 >
-  <div class="page-header">
+  <div class="page-header cv-header">
     <h1>Curriculum Vitae</h1>
+    <a href="/files/Bloch_CV.pdf" class="cv-download" download>
+      Download CV (PDF)
+    </a>
   </div>
 
   <div class="cv-layout">
@@ -40,10 +43,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <section class="card cv-section">
         <h2>Academic Positions</h2>
         <div class="cv-entry">
-          <div class="cv-when">2025&ndash;</div>
+          <div class="cv-when">2025&ndash;Present</div>
           <div class="cv-what">
             <p><strong>Professor of Ethnic Studies</strong> &mdash; Cabrillo College</p>
-            <p class="cv-detail">Hispanic-Serving Institution, Santa Cruz, CA.</p>
           </div>
         </div>
         <div class="cv-entry">
@@ -62,7 +64,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <div class="cv-when">2018&ndash;20</div>
           <div class="cv-what">
             <p><strong>Florence Levy Kay Fellow</strong> &mdash; Brandeis University</p>
-            <p class="cv-detail">Founded first NAIS curriculum at Brandeis.</p>
           </div>
         </div>
         <div class="cv-entry">
@@ -71,22 +72,44 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <p><strong>Instructor</strong> &mdash; University of Virginia</p>
           </div>
         </div>
+      </section>
+
+      <section class="card cv-section">
+        <h2>DEI &amp; Other Employment</h2>
+        <div class="cv-entry">
+          <div class="cv-when">2016&ndash;Present</div>
+          <div class="cv-what">
+            <p><strong>Independent DEI Consultant</strong> &mdash; iChange Collaborative</p>
+          </div>
+        </div>
+        <div class="cv-entry">
+          <div class="cv-when">2020&ndash;22</div>
+          <div class="cv-what">
+            <p><strong>Independent DEI Consultant</strong> &mdash; Both And Partners</p>
+          </div>
+        </div>
+        <div class="cv-entry">
+          <div class="cv-when">2018</div>
+          <div class="cv-what">
+            <p><strong>Archivist</strong> &mdash; Charlottesville Digital Archive Project</p>
+          </div>
+        </div>
+        <div class="cv-entry">
+          <div class="cv-when">2017&ndash;18</div>
+          <div class="cv-what">
+            <p><strong>Tribal Outreach Coordinator</strong> &mdash; Indigenous Ecologies Workshop, UVA</p>
+          </div>
+        </div>
+        <div class="cv-entry">
+          <div class="cv-when">2017</div>
+          <div class="cv-what">
+            <p><strong>Curatorial Intern</strong> &mdash; Kluge-Ruhe Aboriginal Art Collection, UVA</p>
+          </div>
+        </div>
         <div class="cv-entry">
           <div class="cv-when">2011&ndash;12</div>
           <div class="cv-what">
             <p><strong>AmeriCorps VISTA</strong> &mdash; University of Miami</p>
-            <p class="cv-detail">Office of Civic and Community Engagement.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="card cv-section">
-        <h2>Consulting</h2>
-        <div class="cv-entry">
-          <div class="cv-when">2016&ndash;</div>
-          <div class="cv-what">
-            <p><strong>Transformative Leadership Consulting</strong></p>
-            <p class="cv-detail">iChange Collaborative / Both And Partners. Independent equity and inclusion consulting.</p>
           </div>
         </div>
       </section>
@@ -113,7 +136,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <div class="cv-when">~$22,000</div>
           <div class="cv-what"><p>Multiple University of Virginia internal grants</p></div>
         </div>
-        <p class="cv-detail" style="margin-top: var(--space-md); padding-left: calc(6rem + var(--space-lg));">All grants funded anthropological fieldwork. All tech projects were built without any tech funding.</p>
+        <p class="cv-detail" style="margin-top: var(--space-md); padding-left: calc(6rem + var(--space-md));">All grants funded anthropological fieldwork. All tech projects were built without any tech funding.</p>
       </section>
 
       <section class="card cv-section">
@@ -127,67 +150,81 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     </div>
 
-    <aside class="cv-sidebar">
-      <div class="card cv-sidebar-card">
-        <a href="/files/Bloch_CV.pdf" class="cv-button" download>
-          Download CV (PDF)
-        </a>
-      </div>
-
-      <div class="card cv-sidebar-card">
-        <h3>See Also</h3>
-        <nav class="cv-nav" aria-label="Related sections">
-          <a href="/publications/">Publications</a>
-          <a href="/research/">Research Programs</a>
-          <a href="/projects/">Projects</a>
-          <a href="/teaching/">Teaching</a>
-        </nav>
-      </div>
-    </aside>
   </div>
 </BaseLayout>
 
 <style>
-  .cv-layout {
-    display: grid;
-    grid-template-columns: 1fr 220px;
-    gap: var(--space-xl);
-    align-items: start;
+  .cv-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+    flex-wrap: wrap;
   }
 
-  @media (max-width: 900px) {
-    .cv-layout {
-      grid-template-columns: 1fr;
-    }
+  .cv-download {
+    display: inline-block;
+    padding: var(--space-sm) var(--space-lg);
+    background: var(--bg-input);
+    border: 1px solid var(--amber-dim);
+    border-radius: 6px;
+    color: var(--amber);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: var(--text-sm);
+    text-decoration: none;
+    transition: border-color var(--transition-base), background-color var(--transition-base);
+    white-space: nowrap;
+  }
 
-    .cv-sidebar {
-      order: -1;
-    }
+  .cv-download:hover {
+    border-color: var(--amber);
+    background-color: var(--bg-elevated);
+    text-decoration: none;
+  }
+
+  .cv-layout {
+    width: 100%;
   }
 
   /* Main column */
   .cv-section {
-    padding: var(--space-xl);
-    margin-bottom: var(--space-lg);
+    padding: var(--space-lg);
+    margin-bottom: var(--space-md);
   }
 
   .cv-section h2 {
     font-size: var(--text-xl);
-    margin-bottom: var(--space-lg);
+    margin-bottom: var(--space-md);
     padding-bottom: var(--space-sm);
-    border-bottom: 1px solid var(--border);
+    border-bottom: none;
+    background-image: linear-gradient(to right,
+      rgba(192, 136, 32, 0.7),
+      rgba(192, 136, 32, 0.4) 30%,
+      rgba(106, 74, 18, 0) 55%);
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    background-position: bottom;
   }
 
   .cv-entry {
     display: grid;
     grid-template-columns: 6rem 1fr;
-    gap: var(--space-lg);
+    gap: var(--space-md);
     padding: var(--space-sm) 0;
-    border-bottom: 1px solid var(--border);
+    border-bottom: none;
+    background-image: linear-gradient(to right,
+      rgba(106, 74, 18, 0),
+      rgba(192, 136, 32, 0.5) 20%,
+      rgba(192, 136, 32, 0.5) 80%,
+      rgba(106, 74, 18, 0));
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    background-position: bottom;
   }
 
   .cv-entry:last-child {
-    border-bottom: none;
+    background-image: none;
   }
 
   .cv-when {
@@ -217,63 +254,4 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     color: var(--text-primary);
   }
 
-  /* Sidebar */
-  .cv-sidebar {
-    position: sticky;
-    top: calc(64px + var(--space-lg));
-  }
-
-  .cv-sidebar-card {
-    padding: var(--space-lg);
-    margin-bottom: var(--space-lg);
-  }
-
-  .cv-sidebar-card h3 {
-    font-size: var(--text-sm);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--text-muted);
-    font-family: var(--font-body);
-    margin-bottom: var(--space-md);
-  }
-
-  .cv-button {
-    display: block;
-    text-align: center;
-    padding: var(--space-md);
-    background: var(--bg-input);
-    border: 1px solid var(--amber-dim);
-    border-radius: 6px;
-    color: var(--amber);
-    font-family: var(--font-body);
-    font-weight: 600;
-    font-size: var(--text-sm);
-    text-decoration: none;
-    transition: border-color var(--transition-base), background-color var(--transition-base);
-  }
-
-  .cv-button:hover {
-    border-color: var(--amber);
-    background-color: var(--bg-elevated);
-    text-decoration: none;
-  }
-
-  .cv-nav {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-sm);
-  }
-
-  .cv-nav a {
-    font-size: var(--text-sm);
-    color: var(--text-secondary);
-    text-decoration: none;
-    padding: var(--space-xs) 0;
-    transition: color var(--transition-fast);
-  }
-
-  .cv-nav a:hover {
-    color: var(--amber);
-    text-decoration: none;
-  }
 </style>
