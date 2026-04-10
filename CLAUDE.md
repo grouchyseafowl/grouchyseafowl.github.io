@@ -64,20 +64,26 @@ Deployment is via GitHub Actions — push to main triggers build and deploy to G
 4. **Specificity over generality.** Named scholars, concrete findings, particular tensions. If a description could appear on any academic's site, rewrite it.
 5. **Low friction for June.** She reviews and approves. Agents maintain. The system should not require her initiative to stay current.
 
-## Phase 2 Content Notes
+## Maintenance Workflow
 
-Phase 2 populates the placeholder content. The agent doing Phase 2 must:
+The site is fully populated as of 2026-04-09. Agents maintain it; June reviews and approves. Do not re-do work that's already done — read the current pages before editing.
 
-1. **Read the full `JUNE_BLOCH_AGENT_BRIEFING.md`** — the entire document, not excerpts
-2. **Read the social media voice/story materials** — these provide framing devices (how June talks about her work in accessible, story-driven ways)
-3. **Frame through story, not lists.** Research programs should read like "here's the question that keeps me up at night" not "this research program examines..."
-4. **Include Multiverse School** on Teaching page under Professional Development
-5. **Include Transformative Leadership consulting** on Teaching page (get details from June)
-6. **Earlier names** (Lee Bloch, Leigh Bloch) are listed openly with context for readers
-7. **Populate publications** from agent briefing + scholar profile + Zotero MCP if available
-8. **"Disabled by Design" explainer** — add a section on the home page (below the hero) explaining the concept: systems are designed in ways that produce disability, and redesigning them requires interrogating constitutive power relations. Connect it to the Bluesky handle (@disabledbydesign.bsky.social) and the scholarly work. This is the site's framing concept, not just a brand name.
-9. **Add RoboStripper and CGT Skill** to Projects page. CGT skill source: `/Users/june/Documents/Teaching/2026courseplanning/cgt_skill/`. RoboStripper: `/Users/june/Documents/GitHub/RoboStripper/`
-10. **Clean headshot needed** — current images have "DISABLED BY DESIGN" text overlay. Either get a clean version from June or CSS-crop the existing one. A clean professional headshot is better for job search contexts.
+**What triggers an update and what to change:**
+
+| Trigger | What to update |
+|---|---|
+| Paper accepted (in press, no DOI yet) | `publications.astro` — add `<details class="pub-card">` with `In press` badge; no schema entry yet |
+| Paper published (DOI assigned) | `publications.astro` — update year badge, add DOI links, add `ScholarlyArticle` entry to `publicationsJsonLd` array at top of file |
+| In-press paper gets DOI | Same as above — promote from in-press card to full entry with schema |
+| New project ships | `projects.astro` — read the project README first; frame through story not feature list |
+| CV PDF changes | Replace `public/files/Bloch_CV.pdf` — no code changes needed |
+| New job or affiliation | Update `BaseLayout.astro` Person schema `jobTitle` field + About page + homepage hero as needed |
+| New headshot | Replace `public/images/headshot-rect.png` — target 560×700px, compress to <800KB |
+| New research finding worth surfacing | `research.astro` — read primary sources first; see Content Sources above |
+
+**Before editing any page:** read it first. Content is inline in `.astro` files. The publications page is the most complex — the `.astro` file is the source of truth, not any JSON data file.
+
+**After any change:** `npm run build` to verify, then commit and push. GitHub Actions deploys automatically on push to main.
 
 ## SEO
 
@@ -131,7 +137,7 @@ SEO infrastructure was implemented 2026-04-09. Before making any changes, read t
 
 ## Domain
 
-Target domain: `ljunebloch.com` (Cloudflare Registrar, ~$10.46/yr). Currently deploying to `grouchyseafowl.github.io`. When domain is purchased, update `astro.config.mjs` site URL and add CNAME file to `public/`.
+`ljunebloch.com` — live as of 2026-04-09. DNS on Cloudflare. Email forwarding via Cloudflare Email Routing: `june@ljunebloch.com` → Gmail.
 
 ## Repo
 
