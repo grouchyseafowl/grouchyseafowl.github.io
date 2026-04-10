@@ -7,42 +7,67 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   description="Disabled by Design — what the name means, who June is, and the design orientation behind the work."
 >
   <div class="page-header">
-    <h1><span class="rose">Disabled</span> by <span class="rose">Design</span></h1>
+    <h1><span class="rose">Disabled</span> <span class="by">by</span> <span class="rose">Design</span></h1>
+    <p class="subtitle">A structural critique, a design parameter, and a refusal.</p>
   </div>
 
-  <div class="about-content">
-    <p>
-      I design from the standpoint of a disabled person — disability is a parameter through
-      which I engage with the world, and it lets me perceive things somebody with a different
-      neurotype would not have thought of. That's a feature, not a deficit.
-    </p>
-    <p>
-      The name also names the problem: systems are <em>designed</em> in ways that produce
-      disability. Rigid deadlines, surveillance grading, deficit-model assessments — the
-      infrastructure disables people, then calls the people broken. The social model of
-      disability applied to every structure I study and build.
-    </p>
-    <p>
-      And there's the third meaning. Against the impulse to genetic-engineer away disability,
-      against the calculation that some bodies are acceptable casualties. I don't want a future
-      that optimizes me out. My existence is a fucking asset. I'm right here.
-    </p>
-  </div>
+  <section>
+    <h2>What the Name Means</h2>
+    <div class="about-content">
+      <p>
+        I design from the standpoint of a disabled trans ethnic studies professor on contingent
+        faculty lines. Every one of those positions is a parameter — shaping what I perceive,
+        what I build, and what I refuse to accept as given. They let me see things somebody with
+        a different neurotype, a different body, a different institutional position would not
+        have thought of. That's a feature, not a deficit.
+      </p>
+      <p>
+        The name also names the problem: systems are <em>designed</em> in ways that produce
+        disability. Rigid deadlines, surveillance grading, deficit-model assessments — the
+        infrastructure disables people, then calls the people broken. The social model of
+        disability applied to every structure I study and build.
+      </p>
+      <p>
+        And there's the third meaning: against the impulse to genetic-engineer away disability.
+        I don't want a future that optimizes me out. My existence is an asset.
+      </p>
+    </div>
+  </section>
 
   <section>
     <h2>The Design Orientation</h2>
     <div class="about-content">
       <p>
-        I don't just build software that accomplishes a task. I reinvent the ways we do things
-        by interrogating the constitutive power relations and forms of structural violence —
-        and design systems for <em>that</em>. The classroom becomes a strike. The assignment
-        becomes a launchpad for discussion, not an endpoint for evaluation. The AI response
-        becomes mandatory critical analysis through 76 frameworks.
+        I don't just build software that accomplishes a task. I reinvent the concept behind
+        the task — interrogate the power relations embedded in it, critique them, and build
+        something that operates from different assumptions.
       </p>
       <p>
-        Each of these follows the same pattern: identify the structural violence embedded in
-        the existing approach, critique it, build something that operates from different
-        assumptions. The critique and the code are the same practice.
+        In my teaching, I reinvented what an assignment could be — from an endpoint for
+        evaluation to a launchpad for discussion. That conceptual shift made it automatable,
+        and the automation opened up the pedagogy. The system I built asks what each student
+        is reaching for rather than scoring them against a static rubric. It surfaces
+        class-wide themes and tensions, flags power moves that silence minoritized
+        students — recentering whiteness, respectability politics — with guards that
+        counteract the LLM's default biases, and surfaces burnout signals. FERPA-compliant,
+        runs locally on a teacher's laptop.
+        Each piece feeds the other.
+      </p>
+      <p>
+        I built a tool to help me do more praxis, and it helped me build a praxis engine
+        to do more praxis. Reframe loads critical theory not as a checklist but as mandatory
+        infrastructure — 76 frameworks that speak independently before synthesis, navigate
+        tensions without flattening, and interrogate whose erasure is a structural condition
+        of the conversation itself (inspired by Gayatri Spivak — probably impossible, but
+        the attempt itself is worth it). The session systems parse nonlinear thinking and counteract
+        LLM recency bias: WEAVE functions let you infodump across topics and the engine
+        organizes them, PARK captures tangents mid-task with full context. A distributed
+        intelligence model finds through-lines across sessions and generates seeds while the
+        system is otherwise idle. Built for how I actually communicate and think, not for how
+        software assumes people do.
+      </p>
+      <p>
+        The critique and the code are the same practice.
       </p>
     </div>
   </section>
@@ -51,16 +76,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <h2>Survival Architecture</h2>
     <div class="about-content">
       <p>
-        Every tool I've built emerged from conditions that demanded it. Teaching four classes
-        of 42&ndash;49 students without a TA at a Hispanic-Serving Institution under a new state
-        mandate. Losing the ability to focus on reading under political crisis. Watching a
-        classroom become a site where fascism normalizes itself. A well-funded lab would not
-        have built capacity-responsive pacing or tangent capture because they wouldn't have
-        needed them. The survival architecture concept is literal.
+        Every tool I've built emerged from conditions that demanded it. Autograder4Canvas:
+        managing 170+ students without a TA. EvalEye: the college wasn't processing student
+        evaluations, so the forms sat in boxes. RoboStripper: scholarly reading made accessible
+        as audio when the ability to focus on reading degrades under political crisis. Reframe:
+        navigating the contradictions of teaching under fascism — and then everything else.
       </p>
       <p>
-        "The conditions that make me precarious are the same conditions that made this system
-        necessary and possible."
+        The conditions that make me precarious are the same conditions that made this system
+        necessary and possible.
       </p>
     </div>
   </section>
@@ -75,5 +99,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     color: var(--text-secondary);
     line-height: 1.8;
     font-size: var(--text-lg);
+  }
+
+  .by {
+    color: var(--text-primary);
   }
 </style>

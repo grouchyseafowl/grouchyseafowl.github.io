@@ -18,7 +18,7 @@
   /* Text */
   --text-primary: #F0E6D0;
   --text-secondary: #C0B090;
-  --text-muted: #8A7A60;
+  --text-muted: #9A8A6E;
 
   /* Amber (primary accent) */
   --amber: #F0A830;
@@ -67,7 +67,7 @@
   --space-2xl: 8rem;
 
   /* Layout */
-  --max-width: 1200px;
+  --max-width: 960px;
   --content-padding: 2rem;
 
   /* Transitions */
@@ -195,7 +195,7 @@ h1 {
 }
 
 h2 {
-  font-size: var(--text-2xl);
+  font-size: var(--text-xl);
   margin-bottom: var(--space-lg);
 }
 
@@ -275,6 +275,10 @@ pre code {
   padding: 0 var(--content-padding);
 }
 
+.container--wide {
+  max-width: 1200px;
+}
+
 main {
   min-height: calc(100vh - 200px);
   padding: var(--space-xl) 0;
@@ -333,7 +337,7 @@ section:last-child {
     inset 0 0 40px rgba(240, 168, 48, 0.03);
 }
 
-.card h3 {
+.card h2 {
   color: var(--amber);
 }
 
@@ -425,7 +429,7 @@ section:last-child {
 .pub-year {
   font-family: var(--font-mono);
   font-size: var(--text-sm);
-  color: var(--amber-dim);
+  color: var(--amber-mid);
 }
 
 /* --- Hero (Home Page) --- */
@@ -577,7 +581,7 @@ section:last-child {
     inset 0 0 40px rgba(240, 168, 48, 0.03);
 }
 
-.feature-link h3 {
+.feature-link h2 {
   margin-bottom: var(--space-sm);
 }
 

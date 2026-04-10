@@ -11,67 +11,98 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <p class="subtitle">For academic inquiries, speaking, collaboration, or just saying hello.</p>
   </div>
 
-  <div class="contact-grid">
-    <div class="card contact-card">
-      <h3>Email</h3>
-      <p>
-        <a href="mailto:june@ljunebloch.com" class="contact-link">june@ljunebloch.com</a>
-      </p>
-      <p class="text-secondary">Best for academic inquiries, collaboration proposals, and speaking invitations.</p>
-    </div>
+  <div class="contact-content">
+    <p class="contact-email">
+      <a href="mailto:june@ljunebloch.com">june@ljunebloch.com</a>
+    </p>
 
-    <div class="card contact-card">
-      <h3>Bluesky</h3>
-      <p>
-        <a href="https://bsky.app/profile/disabledbydesign.bsky.social" class="contact-link">@disabledbydesign.bsky.social</a>
-      </p>
-      <p class="text-secondary">Where I post about research, teaching, AI, and structural violence. Academic/STS community.</p>
-    </div>
-
-    <div class="card contact-card">
-      <h3>Google Scholar</h3>
-      <p>
-        <a href="https://scholar.google.com/citations?user=9bQ8kjIAAAAJ&hl=en&oi=ao" class="contact-link">Scholar profile</a>
-      </p>
-      <p class="text-secondary">Full publication record and citation data.</p>
-    </div>
-
-    <div class="card contact-card">
-      <h3>GitHub</h3>
-      <p>
-        <a href="https://github.com/grouchyseafowl" class="contact-link mono">grouchyseafowl</a>
-      </p>
-      <p class="text-secondary">All projects are open source. Reframe, Autograder4Canvas, EvalEye, and more.</p>
-    </div>
-
-    <div class="card contact-card">
-      <h3>LinkedIn</h3>
-      <p>
-        <a href="https://www.linkedin.com/in/l-june-bloch-1897a329/" class="contact-link">L. June Bloch</a>
-      </p>
-      <p class="text-secondary">Professional network and career history.</p>
-    </div>
+    <ul class="contact-links">
+      <li>
+        <span class="link-label">Bluesky</span>
+        <a href="https://bsky.app/profile/disabledbydesign.bsky.social">@disabledbydesign.bsky.social</a>
+      </li>
+      <li>
+        <span class="link-label">GitHub</span>
+        <a href="https://github.com/grouchyseafowl" class="mono">grouchyseafowl</a>
+      </li>
+      <li>
+        <span class="link-label">Google Scholar</span>
+        <a href="https://scholar.google.com/citations?user=9bQ8kjIAAAAJ&hl=en&oi=ao">Publication record</a>
+      </li>
+      <li>
+        <span class="link-label">LinkedIn</span>
+        <a href="https://www.linkedin.com/in/l-june-bloch-1897a329/">L. June Bloch</a>
+      </li>
+    </ul>
   </div>
 </BaseLayout>
 
 <style>
-  .contact-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  .contact-content {
+    max-width: 65ch;
+  }
+
+  .contact-email {
+    margin-bottom: var(--space-xl);
+  }
+
+  .contact-email a {
+    font-family: var(--font-mono);
+    font-size: var(--text-2xl);
+    color: var(--amber);
+    font-weight: 400;
+  }
+
+  .contact-email a:hover {
+    color: var(--amber-mid);
+  }
+
+  .contact-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .contact-links li {
+    display: flex;
+    align-items: baseline;
     gap: var(--space-lg);
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid var(--border);
   }
 
-  .contact-card h3 {
-    margin-bottom: var(--space-sm);
+  .contact-links li:last-child {
+    border-bottom: none;
   }
 
-  .contact-link {
-    font-size: var(--text-lg);
-    font-weight: 500;
-  }
-
-  .text-secondary {
-    color: var(--text-secondary);
+  .link-label {
+    font-family: var(--font-body);
     font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    min-width: 10rem;
+    flex-shrink: 0;
+  }
+
+  .contact-links a {
+    font-size: var(--text-base);
+  }
+
+  @media (max-width: 480px) {
+    .contact-email a {
+      font-size: var(--text-xl);
+    }
+
+    .contact-links li {
+      flex-direction: column;
+      gap: var(--space-xs);
+    }
+
+    .link-label {
+      min-width: auto;
+    }
   }
 </style>

@@ -7,6 +7,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="hero-text">
       <h1 class="hero-name">L. June Bloch</h1>
       <p class="hero-identity">Anthropologist · Ethnic Studies · Builder</p>
+      <p class="hero-anchor">Seven open-source tools built from critical theory, zero dollars of tech funding.</p>
       <p class="hero-intro">
         I don't just write about how systems produce violence — I build the tools that
         redesign them. Same critical theory, same analytical practice: the publications
@@ -34,19 +35,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section>
     <div class="feature-grid">
       <a href="/research/" class="feature-link">
-        <h3>Research</h3>
+        <h2>Research</h2>
         <p>An elder said: "Did you ever consider that it isn't a bird?" It was a moth. That question reorganized fifteen years of fieldwork and five research programs.</p>
       </a>
       <a href="/publications/" class="feature-link">
-        <h3>Publications</h3>
+        <h2>Publications</h2>
         <p><em>Cultural Anthropology</em>, <em>American Anthropologist</em>, <em>Current Anthropology</em> — recognition, animacy, settler colonialism, genocide, algorithmic justice, Indigenous knowledge, trans studies, and the politics of care.</p>
       </a>
       <a href="/projects/" class="feature-link">
-        <h3>Software</h3>
+        <h2>Software</h2>
         <p>"Output format is the activation function for bias." Seven open-source tools built from critical theory, zero dollars of tech funding.</p>
       </a>
       <a href="/teaching/" class="feature-link">
-        <h3>Teaching</h3>
+        <h2>Teaching</h2>
         <p>Ethnic Studies was created by student strikes. The pedagogy should honor that — consensus-based, horizontal, survivable. No late penalties, reading equivalencies, emergency flex weeks.</p>
       </a>
     </div>
@@ -54,3 +55,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 
 </BaseLayout>
+
+<style>
+  .hero-anchor {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    color: var(--text-muted);
+    font-style: italic;
+    margin-bottom: var(--space-lg);
+  }
+</style>

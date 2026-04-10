@@ -6,11 +6,13 @@ import '../styles/global.css';
 interface Props {
   title: string;
   description?: string;
+  wide?: boolean;
 }
 
 const {
   title,
-  description = 'Dr. L. June Bloch — anthropologist, ethnic studies scholar, and builder of research tools that interrogate constitutive power relations and structural violence.'
+  description = 'Dr. L. June Bloch — anthropologist, ethnic studies scholar, and builder of research tools that interrogate constitutive power relations and structural violence.',
+  wide = false,
 } = Astro.props;
 
 const siteTitle = title === 'Home'
@@ -39,7 +41,7 @@ const siteTitle = title === 'Home'
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <Nav />
-    <main id="main-content" class="container">
+    <main id="main-content" class:list={['container', { 'container--wide': wide }]}>
       <slot />
     </main>
     <Footer />
