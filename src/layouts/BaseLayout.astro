@@ -18,6 +18,9 @@ const {
 const siteTitle = title === 'Home'
   ? 'L. June Bloch — Anthropologist, Ethnic Studies Scholar, Builder'
   : `${title} — L. June Bloch`;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImage = new URL('/images/headshot-rect.png', Astro.site);
 ---
 
 <!DOCTYPE html>
@@ -26,15 +29,42 @@ const siteTitle = title === 'Home'
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    <meta name="author" content="L. June Bloch" />
+    <link rel="canonical" href={canonicalURL} />
 
     <!-- Open Graph -->
     <meta property="og:title" content={siteTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="/images/headshot-rect.png" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:site_name" content="L. June Bloch" />
+
+    <!-- Twitter / social cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={siteTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Structured data -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "L. June Bloch",
+      "url": "https://ljunebloch.com",
+      "image": "https://ljunebloch.com/images/headshot-rect.png",
+      "jobTitle": "Anthropologist & Ethnic Studies Scholar",
+      "description": "Anthropologist, ethnic studies scholar, and builder of research tools that interrogate constitutive power relations and structural violence.",
+      "sameAs": [
+        "https://github.com/grouchyseafowl",
+        "https://bsky.app/profile/disabledbydesign.bsky.social",
+        "https://www.linkedin.com/in/l-june-bloch-1897a329/",
+        "https://scholar.google.com/citations?user=9bQ8kjIAAAAJ"
+      ]
+    })} />
 
     <title>{siteTitle}</title>
   </head>
