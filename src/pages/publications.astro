@@ -1,11 +1,82 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const author = {
+  "@type": "Person",
+  "name": "L. June Bloch",
+  "url": "https://ljunebloch.com",
+  "identifier": "https://orcid.org/0000-0001-6805-0192"
+};
+
+const publicationsJsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "Anti-Trans Laws, the UN Genocide Convention and the Legal Calculation of Acceptable Suicide Rates.",
+    "author": author,
+    "datePublished": "2024",
+    "isPartOf": { "@type": "Periodical", "name": "Anthropology Now" },
+    "url": "https://doi.org/10.1080/19428200.2023.2321049",
+    "identifier": { "@type": "PropertyValue", "propertyID": "doi", "value": "10.1080/19428200.2023.2321049" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "No Gods, No Masters: Indigenous Environmental Knowledge as a Paradigm for the Interpretation of Mississippian Art.",
+    "author": author,
+    "datePublished": "2021",
+    "isPartOf": { "@type": "Periodical", "name": "Southeastern Archaeology" },
+    "url": "https://doi.org/10.1080/0734578X.2021.1983119",
+    "identifier": { "@type": "PropertyValue", "propertyID": "doi", "value": "10.1080/0734578X.2021.1983119" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "Animate Earth, Settler Ruins: Mound Landscapes and Decolonial Futures in the Native South.",
+    "author": author,
+    "datePublished": "2020",
+    "isPartOf": { "@type": "Periodical", "name": "Cultural Anthropology" },
+    "url": "https://doi.org/10.14506/CA35.4.02",
+    "identifier": { "@type": "PropertyValue", "propertyID": "doi", "value": "10.14506/CA35.4.02" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "Oral Traditions and Mounds, Owls and Movement: An Archaeological Ethnography of Multispecies Embodiments and Everyday Life at Poverty Point.",
+    "author": author,
+    "datePublished": "2019",
+    "isPartOf": { "@type": "Periodical", "name": "Journal of Social Archaeology" },
+    "url": "https://doi.org/10.1177/1469605319846985",
+    "identifier": { "@type": "PropertyValue", "propertyID": "doi", "value": "10.1177/1469605319846985" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "Past as Prophecy: Indigenous Diplomacies beyond Liberal Settler Regimes of Recognition, as Told in Shell.",
+    "author": author,
+    "datePublished": "2019",
+    "isPartOf": { "@type": "Periodical", "name": "Religions" },
+    "url": "https://doi.org/10.3390/rel10090510",
+    "identifier": { "@type": "PropertyValue", "propertyID": "doi", "value": "10.3390/rel10090510" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "Tales of Esnesv: Indigenous Oral Traditions about Trader-Diplomats in Ancient Southeastern North America.",
+    "author": author,
+    "datePublished": "2018",
+    "isPartOf": { "@type": "Periodical", "name": "American Anthropologist" },
+    "url": "https://doi.org/10.1111/aman.13134",
+    "identifier": { "@type": "PropertyValue", "propertyID": "doi", "value": "10.1111/aman.13134" }
+  }
+];
 ---
 
 <BaseLayout
   title="Publications"
   description="Publications by L. June Bloch in Cultural Anthropology, American Anthropologist, Current Anthropology, and other major journals."
   wide
+  jsonld={publicationsJsonLd}
 >
   <div class="page-header pub-page-header">
     <div>
