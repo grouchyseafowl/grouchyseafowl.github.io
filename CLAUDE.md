@@ -79,6 +79,56 @@ Phase 2 populates the placeholder content. The agent doing Phase 2 must:
 9. **Add RoboStripper and CGT Skill** to Projects page. CGT skill source: `/Users/june/Documents/Teaching/2026courseplanning/cgt_skill/`. RoboStripper: `/Users/june/Documents/GitHub/RoboStripper/`
 10. **Clean headshot needed** — current images have "DISABLED BY DESIGN" text overlay. Either get a clean version from June or CSS-crop the existing one. A clean professional headshot is better for job search contexts.
 
+## SEO
+
+SEO infrastructure was implemented 2026-04-09. Before making any changes, read the files listed below — don't guess at structure.
+
+### What's implemented and where
+
+**`src/layouts/BaseLayout.astro`** — all site-wide SEO lives here:
+- `<meta name="description">` — per-page, passed as a prop
+- `<link rel="canonical">` — auto-generated from `Astro.site` + current path
+- Open Graph tags (`og:title`, `og:description`, `og:type`, `og:url`, `og:image`, `og:site_name`) — image is absolute URL
+- Twitter/social card tags (`twitter:card`, `twitter:title`, `twitter:description`, `twitter:image`)
+- `<meta name="author">` — "L. June Bloch"
+- **Person JSON-LD schema** — name, job title, image, description, and `sameAs` links to ORCID, GitHub, Bluesky, LinkedIn, Google Scholar
+- Optional `jsonld` prop — pass any JSON-LD object or array from a page to inject additional structured data into `<head>`
+
+**`src/pages/publications.astro`** — page-level SEO:
+- `ScholarlyArticle` JSON-LD for each published article with a DOI — title, author (with ORCID), journal, date, DOI
+- Passed to `BaseLayout` via the `jsonld` prop
+
+**`public/robots.txt`** — allows all crawlers, points to sitemap
+
+**`astro.config.mjs`** — `@astrojs/sitemap` integration generates `sitemap-index.xml` at build time; all 8 pages included automatically
+
+### How to maintain
+
+**Adding a new published article:**
+1. Add the `<details class="pub-card">` block to `publications.astro` (inline HTML — the `.astro` file is the source of truth, not any JSON data file)
+2. Add a corresponding `ScholarlyArticle` entry to the `publicationsJsonLd` array at the top of the same file
+3. Include `datePublished`, `isPartOf.name` (journal), `url` (DOI link), and `identifier.value` (DOI string)
+
+**Updating the Person schema** (job title, affiliations, social links):
+- Edit the `sameAs` array and `jobTitle` field in `BaseLayout.astro` (around line 55–68)
+- ORCID: `https://orcid.org/0000-0001-6805-0192`
+
+**Adding a new page:**
+- The sitemap auto-updates on build — no manual work needed
+- Canonical URL auto-generates — no manual work needed
+- Pass a custom `description` prop to `BaseLayout` — don't rely on the default
+
+**Google Search Console:**
+- Domain verified as of 2026-04-09
+- Sitemap submitted: `https://ljunebloch.com/sitemap-index.xml`
+- Check Search Console for crawl errors if something seems off
+
+### What's NOT implemented (deliberate)
+
+- No `ScholarlyArticle` schema for articles without DOIs (Academic Precarity 2020, Archaeologies 2014) or in-press/manuscripts — add when DOIs exist
+- No Article schema for book chapters, public scholarship, or zines — not worth the noise
+- No image srcset/WebP variants — headshot is 560×700px at 703KB, acceptable for now
+
 ## Domain
 
 Target domain: `ljunebloch.com` (Cloudflare Registrar, ~$10.46/yr). Currently deploying to `grouchyseafowl.github.io`. When domain is purchased, update `astro.config.mjs` site URL and add CNAME file to `public/`.
