@@ -2,6 +2,8 @@
 
 Academic portfolio for Dr. L. June Bloch. Built with Astro, hosted on GitHub Pages.
 
+**Global behavior instructions are in `~/.claude/CLAUDE.md`.** This file adds project-specific context for the portfolio site.
+
 ## Before Any Content Work
 
 **Read the universal briefing first:** `/Users/june/Documents/GitHub/profile/JUNE_BLOCH_AGENT_BRIEFING.md`
@@ -61,8 +63,7 @@ Deployment is via GitHub Actions — push to main triggers build and deploy to G
 1. **Story over list.** Research programs, projects, and teaching should be framed through narrative, not just described. Use the social media content and voice materials for framing inspiration.
 2. **The contrast is the message.** The site holds scholarly depth and technical building together. The typography (serif headings + sans body + mono code) embodies this. Don't flatten it.
 3. **Accessibility is non-negotiable.** June works on disability. The site must practice what it preaches.
-4. **Specificity over generality.** Named scholars, concrete findings, particular tensions. If a description could appear on any academic's site, rewrite it.
-5. **Low friction for June.** She reviews and approves. Agents maintain. The system should not require her initiative to stay current.
+4. **Specificity over generality.** If a description could appear on any academic's site, rewrite it.
 
 ## Maintenance Workflow
 
@@ -143,3 +144,12 @@ SEO infrastructure was implemented 2026-04-09. Before making any changes, read t
 
 GitHub repo: `grouchyseafowl/grouchyseafowl.github.io`
 Deploy: GitHub Actions on push to main (`.github/workflows/deploy.yml`)
+
+## graphify
+
+This project has a graphify knowledge graph at graphify-out/.
+
+Rules:
+- Before answering architecture or codebase questions, read graphify-out/GRAPH_REPORT.md for god nodes and community structure
+- If graphify-out/wiki/index.md exists, navigate it instead of reading raw files
+- After modifying code files in this session, run `python3 -c "from graphify.watch import _rebuild_code; from pathlib import Path; _rebuild_code(Path('.'))"` to keep the graph current

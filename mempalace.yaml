@@ -1,0 +1,30 @@
+wing: portfolio
+rooms:
+- name: content
+  description: Files from content/
+  keywords:
+  - content
+  - content
+- name: public
+  description: Files from public/
+  keywords:
+  - public
+  - public
+- name: src
+  description: Files from src/
+  keywords:
+  - src
+  - src
+- name: research
+  description: Files from research/
+  keywords:
+  - research
+  - research
+- name: frontend
+  description: Files from pages/
+  keywords:
+  - frontend
+  - pages
+- name: general
+  description: Files that don't fit other rooms
+  keywords: []
